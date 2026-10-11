@@ -1,0 +1,6 @@
+usage: integrated_pipeline.py [-h] [--census-csv CENSUS_CSV]
+                              [--mbm-csv MBM_CSV] [--sfs-csv SFS_CSV]
+                              [--output-dir OUTPUT_DIR]
+                              [--matching-method {hotdeck_exact,hotdeck_nearest,parametric}]
+                              [--log-level LOG_LEVEL]
+integrated_pipeline.py: error: unrecognized arguments: --verbose

@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-11T02:52:27.519064",
+  "input_files": {
+    "census": "data/raw/synthetic_census.csv",
+    "mbm": "data/raw/synthetic_mbm.csv",
+    "sfs": "data/raw/synthetic_sfs_dummy.csv"
+  },
+  "sample_sizes": {
+    "persons": 7442,
+    "households_total": 3000,
+    "households_excluded": 71,
+    "households_analysis": 2929
+  },
+  "v2_baseline": {
+    "national_hardship_rate": 0.23056278517326204,
+    "n_hardship": 667
+  },
+  "v3_extensions": {
+    "matching_method": "hotdeck_nearest",
+    "match_quality": {
+      "coverage": 1.0,
+      "mean_assets_imputed": 10231.140933359664
+    },
+    "liquidity_metrics": {
+      "mean_liquid_assets": 10231.140933359664,
+      "median_liquid_assets": 6846.933295788819,
+      "mean_months_to_default": 29.01593427823039,
+      "median_months_to_default": 4.359855538387796,
+      "zero_buffer_rate": 0.06418572891771936,
+      "sustained_hardship_rate": 0.09593717992488904
+    }
+  },
+  "comparison": {
+    "income_only_hardship": 0.23056278517326204,
+    "zero_buffer_hardship": 0.06418572891771936,
+    "sustained_hardship": 0.09593717992488904,
+    "asset_buffer_effect_ppt": 16.63770562555427
+  }
+}

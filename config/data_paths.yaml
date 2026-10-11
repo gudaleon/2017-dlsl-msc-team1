@@ -1,0 +1,110 @@
+# Data source paths configuration
+
+google_drive:
+  core_data_folder_id: "1SXZmm-RLQtPxKiD_Xc2oZ2xkHB0ePz1O"
+  
+  files:
+    census_2021:
+      file_id: "1N-kgImCjzN7LFXpe7hrN3hOut5PQyFb5"
+      filename: "census_2021_hier_v2.csv"
+      size_mb: 212
+      
+    shs_2023:
+      file_id: "1mTW77o9RutRhksAIFZs82w8K4nkCiDSy"
+      filename: "SHS2023_PUMF_data.txt"
+      format: "ascii_flat"
+      codebook_id: "1FNR7B7f4K86tJpYMkkA10ke9tDYPStX7"
+      
+    chs_2024:
+      file_id: "1YVGLDwtNd8Cp3abHoVt10sg3PCFcfVFP"
+      filename: "canadian-housing-survey-2024-en.xlsx"
+      
+    readme:
+      file_id: "1rgtPSDQ0zpPr-of26DOdZSRGxhu1nocE"
+      filename: "README_datasets.md"
+
+local_paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  external_data: "data/external"
+  outputs: "outputs"
+
+# Key variable mappings from Census PUMF
+census_variables:
+  household_id: "CASEID"
+  shelter_cost: "SHELCO"
+  total_income: "TOTINC"
+  after_tax_income: "TOTINC_AT"
+  tenure: "TENUR"  # 1=Owner, 2=Renter
+  mortgage_flag: "PRESMORTG"  # 1=With mortgage, 0=Without
+  mobility_5yr: "MOB5"  # 5-year mobility status
+  dwelling_value: "VALUE"
+  bedrooms: "BEDRM"
+  rooms: "ROOM"
+  household_type: "HHTYPE"
+  province: "PR"
+  cma: "CMA"
+  subsidy_flag: "SUBSIDY"
+  
+# MBM (Market Basket Measure) configuration
+mbm:
+  base_year: 2018
+  components:
+    - food
+    - clothing
+    - shelter
+    - transportation
+    - other
+    
+# Shock scenario parameters
+scenarios:
+  mortgage_rate_shock:
+    baseline_rate: 2.5  # Average 2021 rate (%)
+    shocked_rate: 6.5   # Post-2023 rate (%)
+    renewal_exposure: 0.20  # 20% of mortgagors renew annually
+    
+  rent_inflation:
+    market_exposed_increase: 0.18  # 18% for movers
+    rent_controlled_cap: 0.025     # 2.5% statutory cap
+    
+  income_growth:
+    # By income decile (Labour Force Survey)
+    decile_multipliers:
+      1: 1.02   # Bottom 10%: 2% growth
+      2: 1.02
+      3: 1.03
+      4: 1.03
+      5: 1.04
+      6: 1.04
+      7: 1.05
+      8: 1.05
+      9: 1.06
+      10: 1.08  # Top 10%: 8% growth
+      
+# Cohort definitions for targeted analysis
+cohorts:
+  lone_parents:
+    hhtype: [7, 8]  # Lone parent families
+    
+  seniors_alone:
+    age_min: 65
+    hhtype: [1]  # Single person household
+    
+  recent_newcomers:
+    immigration_period: "2016-2021"
+    
+  indigenous_off_reserve:
+    indigenous_flag: true
+    reserve_flag: false
+    
+  racialized_minorities:
+    visible_minority: true
+    
+  persons_with_disabilities:
+    disability_flag: true
+    
+  young_renters:
+    age_min: 18
+    age_max: 29
+    tenure: 2  # Renter
+    student_flag: false
