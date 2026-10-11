@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-10-11T02:24:32.694793",
+  "input_files": {
+    "census": "data/raw/synthetic_census.csv",
+    "mbm": "data/raw/synthetic_mbm.csv"
+  },
+  "sample_sizes": {
+    "persons": 7442,
+    "households_total": 3000,
+    "households_excluded": 71,
+    "households_analysis": 2929
+  },
+  "exclusions": [
+    {
+      "exclusion_rule": "zero_negative_total_income",
+      "n_households": 71,
+      "percent": 2.3666666666666667
+    },
+    {
+      "exclusion_rule": "zero_negative_disposable_income",
+      "n_households": 0,
+      "percent": 0.0
+    },
+    {
+      "exclusion_rule": "negative_shelter_cost",
+      "n_households": 0,
+      "percent": 0.0
+    }
+  ],
+  "geographic_coverage": [
+    {
+      "geography": "Explicit CMA",
+      "n_households": 2119,
+      "percent": 70.63333333333334
+    },
+    {
+      "geography": "CMA=999",
+      "n_households": 881,
+      "percent": 29.366666666666667
+    },
+    {
+      "geography": "Territories PR=70",
+      "n_households": 313,
+      "percent": 10.433333333333334
+    }
+  ],
+  "national_hardship_rate": 0.23056278517326204,
+  "validation": {
+    "national_rate": 0.23056278517326204,
+    "cmhc_reference": 0.078,
+    "difference": 0.15256278517326205,
+    "within_1ppt": false
+  },
+  "cma_rates": [
+    {
+      "CMA": 462,
+      "hardship_rate": 0.21322188449848023,
+      "n_households": 429.0,
+      "weighted_population": 46060.0,
+      "n_hardship": 93.0,
+      "weighted_hardship": 9821.0
+    },
+    {
+      "CMA": 535,
+      "hardship_rate": 0.2196786466027795,
+      "n_households": 730.0,
+      "weighted_population": 76489.0,
+      "n_hardship": 157.0,
+      "weighted_hardship": 16803.0
+    },
+    {
+      "CMA": 825,
+      "hardship_rate": 0.2492674350459074,
+      "n_households": 295.0,
+      "weighted_population": 30714.0,
+      "n_hardship": 77.0,
+      "weighted_hardship": 7656.0
+    },
+    {
+      "CMA": 835,
+      "hardship_rate": 0.26066115702479337,
+      "n_households": 222.0,
+      "weighted_population": 24200.0,
+      "n_hardship": 56.0,
+      "weighted_hardship": 6308.0
+    },
+    {
+      "CMA": 933,
+      "hardship_rate": 0.242868725584138,
+      "n_households": 392.0,
+      "weighted_population": 40701.0,
+      "n_hardship": 96.0,
+      "weighted_hardship": 9885.0
+    },
+    {
+      "CMA": 999,
+      "hardship_rate": 0.22864572914582917,
+      "n_households": 861.0,
+      "weighted_population": 89982.0,
+      "n_hardship": 188.0,
+      "weighted_hardship": 20574.0
+    }
+  ]
+}
