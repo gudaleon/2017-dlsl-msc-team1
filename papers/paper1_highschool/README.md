@@ -18,6 +18,8 @@ pdflatex paper1_highschool.tex
 | `paper1_highschool.tex` | Manuscript (includes figures and tables) |
 | `paper1_highschool.pdf` | Compiled PDF |
 | `figures/*.png` | Five 300 dpi figures (2016 wave excluded) |
+| `figures/*.jpg` | Smaller JPEG previews (also on Google Drive) |
+| `FIGURES.md` | Inventory with Drive links |
 | `tables/*.csv` | Five tables for spreadsheets |
 | `tables/*.tex` | Same tables as `\input{...}` snippets |
 | `generate_figures_tables.py` | Rebuild script |
