@@ -1,0 +1,13 @@
+characteristic,year_2006,year_2011,year_2021
+Valid sample size (n),78056.0,341030.0,358621.0
+Median income (2021 CAD),34452.0,45920.0,46000.0
+Income 25th percentile (2021 CAD),17864.0,22960.0,25000.0
+Income 75th percentile (2021 CAD),70180.0,101024.0,93000.0
+Median monthly shelter (2021 CAD),1021.0,1378.0,1400.0
+Shelter 25th percentile (2021 CAD),766.0,804.0,800.0
+Shelter 75th percentile (2021 CAD),1531.0,2181.0,2129.0
+Mean monthly shelter (2021 CAD),1182.0,1573.0,1598.0
+STIR > 30% (%),57.0,52.2,50.8
+STIR > 50% (%),35.8,33.6,31.5
+Housing hardship rate (%),38.0,33.9,37.9
+Households in hardship (n),29681.0,115459.0,135740.0
