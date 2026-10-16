@@ -1,0 +1,45 @@
+{
+  "methodology": "Hot-deck statistical matching (Census + SFS)",
+  "matching_variables": [
+    "income_decile",
+    "tenure"
+  ],
+  "sample_size": 361915,
+  "hardship_households": 291725,
+  "asset_statistics": {
+    "mean": 15045.287482041384,
+    "median": 4389.031336389208,
+    "q25": 1365.1291166837025,
+    "q75": 12984.18842900851
+  },
+  "v2_classification": {
+    "in_hardship": 291725,
+    "no_hardship": 70190,
+    "hardship_rate_pct": 80.60594338449636
+  },
+  "v3_classification": {
+    "critical_risk": 267929,
+    "high_risk": 13202,
+    "moderate_risk": 6645,
+    "lower_risk": 3949,
+    "stable": 70190
+  },
+  "policy_targeting": {
+    "tier_1_emergency": {
+      "households": 267929,
+      "pct_of_population": 74.03091886216376,
+      "characteristics": "In hardship + <3 months liquidity"
+    },
+    "tier_2_preventive": {
+      "households": 13202,
+      "pct_of_population": 3.6478178577842866,
+      "characteristics": "In hardship + 3-6 months liquidity"
+    },
+    "tier_3_monitoring": {
+      "households": 6645,
+      "pct_of_population": 1.8360664796982717,
+      "characteristics": "In hardship + 6-12 months liquidity"
+    }
+  },
+  "key_insight": "Asset augmentation stratifies 291,725 hardship households into actionable risk tiers, enabling targeted policy intervention instead of one-size-fits-all approach"
+}
