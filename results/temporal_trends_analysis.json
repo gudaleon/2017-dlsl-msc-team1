@@ -1,0 +1,75 @@
+{
+  "analysis_date": "2026-10-16T19:24:27.207097",
+  "census_years": [
+    {
+      "year": "Census 2016 (A)",
+      "sample_size": 318529,
+      "mean_income": 1878728.2099651836,
+      "median_income": 40000.0,
+      "mean_shelter": 7768.075519026525,
+      "median_shelter": 9999.0,
+      "mean_stir": 1.275945380170268,
+      "median_stir": 1.9352903225806453,
+      "pct_stir_above_30": 74.32258915200813,
+      "pct_stir_above_50": 69.36982190004677,
+      "hardship_rate": 71.21329612060441,
+      "hardship_count": 226835,
+      "owner_hardship_rate": 79.14852930075736,
+      "renter_hardship_rate": 47.602074710000515
+    },
+    {
+      "year": "Census 2016 (B)",
+      "sample_size": 296929,
+      "mean_income": 1865171.1167383448,
+      "median_income": 34000.0,
+      "mean_shelter": 8779.723775717428,
+      "median_shelter": 9999.0,
+      "mean_stir": 1.4311484047278529,
+      "median_stir": 2.0,
+      "pct_stir_above_30": 77.43534649697402,
+      "pct_stir_above_50": 74.89500857107254,
+      "hardship_rate": 76.66142411148793,
+      "hardship_count": 227630,
+      "owner_hardship_rate": 81.03682321316471,
+      "renter_hardship_rate": 67.0004942004128
+    },
+    {
+      "year": "Census 2016/2011 (C)",
+      "sample_size": 341805,
+      "mean_income": 20255200.839858983,
+      "median_income": 46000.0,
+      "mean_shelter": 1369.678383873846,
+      "median_shelter": 1200.0,
+      "mean_stir": 0.5003662448748645,
+      "median_stir": 0.28,
+      "pct_stir_above_30": 47.040271499831775,
+      "pct_stir_above_50": 30.426997849651116,
+      "hardship_rate": 35.890931964131596,
+      "hardship_count": 122677,
+      "owner_hardship_rate": 32.805419858070486,
+      "renter_hardship_rate": 44.137397526672615
+    },
+    {
+      "year": "Census 2021",
+      "sample_size": 359396,
+      "mean_income": 19472635.23602099,
+      "median_income": 52000.0,
+      "mean_shelter": 1597.487804538726,
+      "median_shelter": 1400.0,
+      "mean_stir": 0.45802037692090364,
+      "median_stir": 0.2709677419354839,
+      "pct_stir_above_30": 45.73256241026611,
+      "pct_stir_above_50": 28.24655811416933,
+      "hardship_rate": 34.1692728911841,
+      "hardship_count": 122803,
+      "owner_hardship_rate": 31.91986708909667,
+      "renter_hardship_rate": 39.96041455312208
+    }
+  ],
+  "key_findings": {
+    "years_analyzed": 4,
+    "income_growth": "Calculated from data",
+    "shelter_cost_growth": "Calculated from data",
+    "hardship_rate_change": "Calculated from data"
+  }
+}

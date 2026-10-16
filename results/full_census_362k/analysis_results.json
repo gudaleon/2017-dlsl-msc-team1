@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-10-16T17:10:36.760394",
+  "sample_size": 361915,
+  "baseline": {
+    "mean_stir": 0.7090928912160992,
+    "pct_stir_above_30": 45.55904010610226
+  },
+  "v2_hardship": {
+    "rate_pct": 80.60594338449636,
+    "count": 291725,
+    "mean_residual_income": 1388660.6631925544
+  },
+  "v3_assets": {
+    "mean_liquid_assets": 20691.10399523564,
+    "median_liquid_assets": 5429.9147876683855,
+    "pct_zero_assets": 0.0
+  },
+  "liquidity_risk": {
+    "Zero buffer": {
+      "count": 0,
+      "pct_of_hardship": 0.0
+    },
+    "<3 months": {
+      "count": 267929,
+      "pct_of_hardship": 91.84300282800582
+    },
+    "3-6 months": {
+      "count": 13202,
+      "pct_of_hardship": 4.525494901019797
+    },
+    "6-12 months": {
+      "count": 6645,
+      "pct_of_hardship": 2.2778301482560632
+    },
+    ">12 months": {
+      "count": 3949,
+      "pct_of_hardship": 1.3536721227183135
+    }
+  }
+}
