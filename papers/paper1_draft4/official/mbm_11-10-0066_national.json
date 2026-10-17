@@ -1,0 +1,451 @@
+{
+  "source": "Statistics Canada, Table 11-10-0066-01, Market Basket Measure (MBM) thresholds for the reference family by Market Basket Measure region, component and base year",
+  "url": "https://doi.org/10.25318/1110006601-eng",
+  "downloaded": "2026-10-17",
+  "reference_family": "two adults and two children",
+  "equivalence": "official MBM uses square-root of family size; factor vs reference family is sqrt(n)/2",
+  "nonshelter_definition": "Food + Clothing + Transportation + Other expenses (Inuusiqattiarniq and Communication services excluded from the national mean)",
+  "series": [
+    {
+      "year": 2005,
+      "base": "2000 base",
+      "note": "2006 Census income year; 2008-base not published for 2005",
+      "n_regions": 48,
+      "national_unweighted_mean": {
+        "total": 27671.9375,
+        "shelter": 7817.083333333333,
+        "nonshelter": 19854.958333333332,
+        "single_adult_full_mbm": 13835.96875,
+        "single_adult_nonshelter": 9927.479166666666
+      },
+      "national_unweighted_median": {
+        "total": 27655.5,
+        "nonshelter": 19830.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 19293.8,
+        "Manitoba": 19674.5,
+        "British Columbia": 20276.8,
+        "Nova Scotia": 20618.4,
+        "Prince Edward Island": 21716.0,
+        "New Brunswick": 20803.4,
+        "Ontario": 18990.833333333332,
+        "Quebec": 18536.571428571428,
+        "Newfoundland and Labrador": 21875.666666666668,
+        "Saskatchewan": 18980.4
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 17957.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 19000.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 18969.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 18560.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 19569.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 25438.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 31514.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 29733.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 27523.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 30863.0
+        }
+      }
+    },
+    {
+      "year": 2010,
+      "base": "2008 base",
+      "note": "2011 NHS income year; 2008-base was the contemporaneous official MBM",
+      "n_regions": 49,
+      "national_unweighted_mean": {
+        "total": 33394.57142857143,
+        "shelter": 8912.530612244898,
+        "nonshelter": 24482.122448979593,
+        "single_adult_full_mbm": 16697.285714285714,
+        "single_adult_nonshelter": 12241.061224489797
+      },
+      "national_unweighted_median": {
+        "total": 33546.0,
+        "nonshelter": 24636.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 23867.6,
+        "Manitoba": 23700.5,
+        "British Columbia": 24470.4,
+        "Nova Scotia": 25977.2,
+        "Prince Edward Island": 26083.666666666668,
+        "New Brunswick": 26300.833333333332,
+        "Ontario": 22599.333333333332,
+        "Quebec": 23287.428571428572,
+        "Newfoundland and Labrador": 27253.333333333332,
+        "Saskatchewan": 23364.4
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 23091.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 23498.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 23067.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 22398.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 24077.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 31573.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 36848.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 35814.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 34042.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 36493.0
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "base": "2008 base",
+      "note": "2016 Census income year; contemporaneous official base before 2018-base revision",
+      "n_regions": 50,
+      "national_unweighted_mean": {
+        "total": 37552.36,
+        "shelter": 9627.32,
+        "nonshelter": 27924.78,
+        "single_adult_full_mbm": 18776.18,
+        "single_adult_nonshelter": 13962.39
+      },
+      "national_unweighted_median": {
+        "total": 37695.5,
+        "nonshelter": 27412.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 27531.5,
+        "Manitoba": 27193.75,
+        "British Columbia": 26837.0,
+        "Nova Scotia": 29105.6,
+        "Prince Edward Island": 30147.666666666668,
+        "New Brunswick": 29836.5,
+        "Ontario": 26061.5,
+        "Quebec": 26743.14285714286,
+        "Newfoundland and Labrador": 30733.666666666668,
+        "Saskatchewan": 27465.6
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 26445.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 26487.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 26672.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 25961.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 26808.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 35427.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 40712.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 40599.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 38681.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 39951.0
+        }
+      }
+    },
+    {
+      "year": 2015,
+      "base": "2018 base",
+      "note": "Sensitivity: 2018-base backcast of 2015",
+      "n_regions": 53,
+      "national_unweighted_mean": {
+        "total": 41044.83018867925,
+        "shelter": 12346.0,
+        "nonshelter": 28698.867924528302,
+        "single_adult_full_mbm": 20522.415094339623,
+        "single_adult_nonshelter": 14349.433962264151
+      },
+      "national_unweighted_median": {
+        "total": 40564.0,
+        "nonshelter": 28227.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 28710.833333333332,
+        "Manitoba": 27608.8,
+        "British Columbia": 28153.4,
+        "Nova Scotia": 30169.8,
+        "Prince Edward Island": 30003.666666666668,
+        "New Brunswick": 29867.0,
+        "Ontario": 27292.571428571428,
+        "Quebec": 28005.571428571428,
+        "Newfoundland and Labrador": 30427.75,
+        "Saskatchewan": 28220.8
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 28025.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 27532.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 27906.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 27749.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 28064.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 38979.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 45708.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 46322.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 45868.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 45967.0
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "base": "2018 base",
+      "note": "2021 Census income year; 2018-base is Canada official poverty line",
+      "n_regions": 66,
+      "national_unweighted_mean": {
+        "total": 50078.34848484849,
+        "shelter": 14985.348484848484,
+        "nonshelter": 34690.5,
+        "single_adult_full_mbm": 25039.174242424244,
+        "single_adult_nonshelter": 17345.25
+      },
+      "national_unweighted_median": {
+        "total": 44507.5,
+        "nonshelter": 31017.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 31075.333333333332,
+        "Manitoba": 29504.4,
+        "British Columbia": 30851.2,
+        "Nova Scotia": 31915.8,
+        "Prince Edward Island": 32014.333333333332,
+        "New Brunswick": 32111.0,
+        "Ontario": 29499.85714285714,
+        "Quebec": 29853.428571428572,
+        "Newfoundland and Labrador": 32309.0,
+        "Northwest Territories": 44981.5,
+        "Nunavut": 68119.0,
+        "Saskatchewan": 30102.2,
+        "Yukon": 38490.0
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 29840.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 29983.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 30291.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 30111.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 30849.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 41506.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 49727.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 50223.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 49723.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 50569.0
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "base": "2008 base",
+      "note": "Sensitivity: 2008-base continued to 2020",
+      "n_regions": 50,
+      "national_unweighted_mean": {
+        "total": 39827.54,
+        "shelter": 10160.24,
+        "nonshelter": 29667.5,
+        "single_adult_full_mbm": 19913.77,
+        "single_adult_nonshelter": 14833.75
+      },
+      "national_unweighted_median": {
+        "total": 40000.0,
+        "nonshelter": 29507.0
+      },
+      "by_province_mean_nonshelter": {
+        "Alberta": 30030.5,
+        "Manitoba": 29077.75,
+        "British Columbia": 29294.8,
+        "Nova Scotia": 30077.2,
+        "Prince Edward Island": 31108.0,
+        "New Brunswick": 31861.833333333332,
+        "Ontario": 28566.666666666668,
+        "Quebec": 28415.714285714286,
+        "Newfoundland and Labrador": 31096.333333333332,
+        "Saskatchewan": 28385.4
+      },
+      "selected_cma_nonshelter": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "nonshelter": 27866.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "nonshelter": 29135.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "nonshelter": 28957.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "nonshelter": 27973.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "nonshelter": 28960.0
+        }
+      },
+      "selected_cma_total": {
+        "Montreal": {
+          "geo": "Montr\u00e9al, Qu\u00e9bec",
+          "total": 37336.0
+        },
+        "Toronto": {
+          "geo": "Toronto, Ontario",
+          "total": 44632.0
+        },
+        "Calgary": {
+          "geo": "Calgary, Alberta",
+          "total": 42923.0
+        },
+        "Edmonton": {
+          "geo": "Edmonton, Alberta",
+          "total": 40729.0
+        },
+        "Vancouver": {
+          "geo": "Vancouver, British Columbia",
+          "total": 43452.0
+        }
+      }
+    }
+  ]
+}

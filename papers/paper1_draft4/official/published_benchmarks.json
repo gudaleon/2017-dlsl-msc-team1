@@ -1,0 +1,84 @@
+{
+  "median_after_tax_household_income_2020_constant_cad": {
+    "source": "Statistics Canada, 2021 Census of Population, Focus on Geography Series / key indicators",
+    "url": "https://www12.statcan.gc.ca/census-recensement/2021/as-sa/fogs-spg/alternative.cfm?dguid=2021A000212&lang=E&objectId=1b&topic=5",
+    "note": "Published in 2020 constant dollars. Convert to current dollars with CPI 18-10-0005 before comparing to PUMF current-dollar medians.",
+    "values": {
+      "2005": 59600,
+      "2010": 63600,
+      "2015": 66500,
+      "2020": 73000
+    }
+  },
+  "unaffordable_housing_stir_ge_30_percent": {
+    "source": "Statistics Canada, The Daily, 21 September 2022; 2021 Census key indicators",
+    "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/220921/dq220921b-eng.htm",
+    "definition": "Share of households spending 30% or more of income on shelter. Official Census unaffordable-housing rate uses before-tax income; universe is owner/renter non-farm non-reserve private households with income > 0 and STIR < 100%.",
+    "values": {
+      "2016": {
+        "all": 24.1,
+        "owner": 16.6,
+        "renter": 40.0
+      },
+      "2021": {
+        "all": 20.9,
+        "owner": 14.8,
+        "renter": 33.2
+      }
+    }
+  },
+  "core_housing_need": {
+    "source": "Statistics Canada / CMHC core housing need; 2016 Census CHN table; The Daily 21 September 2022",
+    "values": {
+      "2006": {
+        "all": 12.7
+      },
+      "2011": {
+        "all": 12.5
+      },
+      "2016": {
+        "all": 12.7,
+        "owner": 6.3,
+        "renter": 26.8
+      },
+      "2021": {
+        "all": 10.1,
+        "owner": 5.3,
+        "renter": 20.0
+      }
+    },
+    "note": "Core housing need is not residual-income hardship. Used only as an independent housing-affordability benchmark."
+  },
+  "cmhc_housing_hardship": {
+    "source": "CMHC Research Insight, Introducing the Housing Hardship Concept, January 2020 (catalogue-style PDF 69619)",
+    "url": "https://assets.cmhc-schl.gc.ca/sites/cmhc/data-research/publications-reports/research-insight/2020/research-insight-introducing-housing-hardship-concept-69619-en.pdf",
+    "definition": "Household is in housing hardship if residual income (disposable income after housing costs) is below the non-shelter portion of the MBM. Square-root equivalence. Regional MBM. Disposable income is the MBM disposable-income concept, not Census TOTINC_AT. Universe: private non-farm non-band non-reserve households with positive disposable income; negative residual income excluded; households with investment/capital-gain/farm income or equivalized income above the provincial median cannot be classified as in hardship.",
+    "published_rates_cis": {
+      "Canada_2012_to_2017_approx": "about 10% down to 9%",
+      "Canada_2017": 9.0,
+      "note": "Canadian Income Survey, not Census PUMF. STIR>30% in the same publication is about 11% (before-tax, restricted universe)."
+    },
+    "census_2021_update": {
+      "title": "New insights on affordability: update on housing hardship from the 2021 Census (NH18-33/85-2024E-PDF)",
+      "status": "PDF listed at publications.gc.ca; retrieval timed out / file later removed (25 Nov 2025). Canada-wide 2021 Census official hardship rate not independently recovered in this reconstruction."
+    }
+  },
+  "private_households": {
+    "source": "Statistics Canada Census / NHS household counts; 2016 hierarchical PUMF The Daily 18 June 2019",
+    "values": {
+      "2006": 12437500,
+      "2011": 13320615,
+      "2016": 14072079,
+      "2021": 14978941
+    },
+    "note": "2016 hierarchical PUMF is a 1% sample of 14,072,079 private households (The Daily reported 140,705 HH / 343,330 persons in the PUMF)."
+  },
+  "low_income_mbm_persons": {
+    "source": "Statistics Canada, Income in Canada 2020 / 2021 Census",
+    "values_percent_persons": {
+      "2015": 14.4,
+      "2020": 11.1
+    },
+    "note": "Person-level official poverty (MBM), not household residual-income hardship."
+  }
+}
