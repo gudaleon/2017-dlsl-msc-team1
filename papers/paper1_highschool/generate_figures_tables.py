@@ -4,13 +4,20 @@
 Uses 2006, 2011, and 2021 Census waves only. Census 2016 is excluded because
 valid-record retention was 9.4% and special codes distorted medians.
 All dollar values are already inflation-adjusted to 2021 CAD.
+
+Analytical numbers are taken from results/four_wave_temporal_results.json and
+are not recalculated here. This script only controls rendering and export.
 """
+
+from __future__ import annotations
 
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
+import numpy as np
 import pandas as pd
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
 FIG_DIR = ROOT / "figures"
@@ -18,31 +25,51 @@ TAB_DIR = ROOT / "tables"
 FIG_DIR.mkdir(exist_ok=True)
 TAB_DIR.mkdir(exist_ok=True)
 
-# Colorblind-safe palette
-NAVY = "#1B4F72"
-TEAL = "#148F77"
-ORANGE = "#D35400"
-GOLD = "#B7950B"
-SLATE = "#34495E"
-RED = "#C0392B"
-GREEN = "#1E8449"
-LIGHT = "#F4F6F7"
+# Okabe–Ito / journal muted palette (colorblind-safe, no neon fills)
+NAVY = "#0072B2"
+TEAL = "#009E73"
+ORANGE = "#E69F00"
+SLATE = "#3D3D3D"
+RED = "#D55E00"
+INK = "#111111"
+GRID = "#D0D0D0"
+
+# Equal-spaced census-year positions so 2021 is not pushed to the far right
+# of a linear time axis (2006–2011 is 5 years; 2011–2021 is 10 years).
+YEAR_POS = {2006: 0, 2011: 1, 2021: 2}
+YEAR_TICKS = [0, 1, 2]
+YEAR_LABELS = ["2006", "2011", "2021"]
 
 plt.rcParams.update(
     {
         "figure.dpi": 150,
         "savefig.dpi": 300,
+        "figure.facecolor": "white",
+        "axes.facecolor": "white",
+        "savefig.facecolor": "white",
+        "savefig.edgecolor": "none",
         "font.family": "DejaVu Sans",
         "font.size": 11,
-        "axes.titlesize": 13,
+        "axes.titlesize": 12,
         "axes.titleweight": "bold",
         "axes.labelsize": 11,
+        "axes.labelcolor": INK,
+        "axes.edgecolor": INK,
+        "axes.linewidth": 0.8,
         "axes.spines.top": False,
         "axes.spines.right": False,
         "axes.grid": True,
-        "grid.alpha": 0.25,
-        "grid.linestyle": "--",
+        "grid.color": GRID,
+        "grid.alpha": 1.0,
+        "grid.linestyle": ":",
+        "grid.linewidth": 0.6,
+        "xtick.color": INK,
+        "ytick.color": INK,
         "legend.frameon": False,
+        "legend.fontsize": 9,
+        "pdf.fonttype": 42,
+        "ps.fonttype": 42,
+        "svg.fonttype": "none",
     }
 )
 
@@ -64,219 +91,372 @@ owner = [None, 31.41, 35.60]
 renter = [38.03, 40.38, 43.64]
 
 
-def savefig(fig, name: str) -> None:
-    path = FIG_DIR / name
-    fig.savefig(path, bbox_inches="tight", facecolor="white")
+def xpos(year_list: list[int]) -> list[int]:
+    return [YEAR_POS[y] for y in year_list]
+
+
+def style_year_axis(ax: plt.Axes) -> None:
+    ax.set_xticks(YEAR_TICKS)
+    ax.set_xticklabels(YEAR_LABELS)
+    ax.set_xlim(-0.35, 2.35)
+
+
+def savefig(fig: plt.Figure, stem: str) -> None:
+    fig.patch.set_facecolor("white")
+    for ax in fig.axes:
+        ax.set_facecolor("white")
+        ax.tick_params(colors=INK)
+    kwargs = dict(
+        facecolor="white",
+        edgecolor="none",
+        bbox_inches="tight",
+        pad_inches=0.28,
+    )
+    png = FIG_DIR / f"{stem}.png"
+    pdf = FIG_DIR / f"{stem}.pdf"
+    svg = FIG_DIR / f"{stem}.svg"
+    fig.savefig(png, dpi=300, **kwargs)
+    fig.savefig(pdf, **kwargs)
+    fig.savefig(svg, **kwargs)
     plt.close(fig)
-    print(f"  wrote {path}")
+    inspect_png(png)
+
+
+def inspect_png(path: Path) -> None:
+    """Inspect the saved raster, not only the Matplotlib window."""
+    im = Image.open(path).convert("RGB")
+    arr = np.asarray(im)
+    h, w, _ = arr.shape
+    if h < 800 or w < 1200:
+        raise RuntimeError(f"{path.name}: export too small ({w}x{h})")
+
+    def band_stats(band: np.ndarray) -> tuple[float, float]:
+        # Mean luminance and share of near-uniform grey pixels.
+        lum = band.mean(axis=2)
+        grey = np.abs(band[:, :, 0].astype(int) - band[:, :, 1].astype(int)) < 8
+        grey &= np.abs(band[:, :, 1].astype(int) - band[:, :, 2].astype(int)) < 8
+        mid = (lum > 160) & (lum < 210)
+        return float(lum.mean()), float((grey & mid).mean())
+
+    top = arr[: max(h // 6, 1)]
+    bot = arr[-max(h // 6, 1) :]
+    left = arr[:, : max(w // 8, 1)]
+    right = arr[:, -max(w // 8, 1) :]
+    for name, band in (("top", top), ("bottom", bot), ("left", left), ("right", right)):
+        lum, grey_share = band_stats(band)
+        if grey_share > 0.55 and 165 < lum < 205:
+            raise RuntimeError(
+                f"{path.name}: {name} band looks washed-out grey "
+                f"(lum={lum:.1f}, grey_share={grey_share:.2f})"
+            )
+    # Ink should exist in the lower third (axes / labels), not a blank slab.
+    lower = arr[int(h * 0.62) :]
+    if lower.std() < 8:
+        raise RuntimeError(f"{path.name}: lower panel has almost no ink (clipped?)")
+    print(f"  wrote {path.name}  {w}x{h}  ok")
 
 
 def fig01_national_trends() -> None:
-    fig, axes = plt.subplots(2, 2, figsize=(11.2, 8.2))
+    fig, axes = plt.subplots(2, 2, figsize=(11.0, 8.0), constrained_layout=True)
     fig.suptitle(
-        "Figure 1. Fifteen-year national trends in Canadian housing affordability (2006–2021)",
+        "Fifteen-year national trends in Canadian housing affordability, 2006–2021",
         fontsize=13,
         fontweight="bold",
-        y=1.01,
+        color=INK,
     )
+    x = xpos(years)
 
     ax = axes[0, 0]
-    ax.plot(years, [v / 1000 for v in inc_med], "o-", color=TEAL, lw=2.4, ms=8, label="Median")
+    ax.plot(x, [v / 1000 for v in inc_med], "o-", color=TEAL, lw=2.2, ms=7, label="Median")
     ax.fill_between(
-        years,
+        x,
         [v / 1000 for v in inc_p25],
         [v / 1000 for v in inc_p75],
         color=TEAL,
-        alpha=0.12,
+        alpha=0.15,
         label="25th–75th percentile",
     )
     ax.set_title("A. Median household income")
-    ax.set_ylabel("2021 CAD (thousands)")
-    ax.set_xticks(years)
-    ax.set_ylim(0, 110)
-    ax.annotate("+33.5%", xy=(2021, 46), xytext=(2014.2, 58),
-                arrowprops=dict(arrowstyle="->", color=TEAL), color=TEAL, fontweight="bold")
+    ax.set_ylabel("Thousands of 2021 CAD")
+    style_year_axis(ax)
+    ax.set_ylim(0, 115)
+    ax.annotate(
+        "+33.5%",
+        xy=(2, 46),
+        xytext=(1.15, 72),
+        arrowprops=dict(arrowstyle="->", color=TEAL, lw=1.1),
+        color=TEAL,
+        fontweight="bold",
+        fontsize=10,
+    )
     ax.legend(loc="upper left")
 
     ax = axes[0, 1]
-    ax.plot(years, shel_med, "s-", color=ORANGE, lw=2.4, ms=8, label="Median")
-    ax.fill_between(years, shel_p25, shel_p75, color=ORANGE, alpha=0.12, label="25th–75th percentile")
+    ax.plot(x, shel_med, "s-", color=ORANGE, lw=2.2, ms=7, label="Median")
+    ax.fill_between(x, shel_p25, shel_p75, color=ORANGE, alpha=0.15, label="25th–75th percentile")
     ax.set_title("B. Median monthly shelter cost")
-    ax.set_ylabel("2021 CAD / month")
-    ax.set_xticks(years)
-    ax.set_ylim(0, 2400)
-    ax.yaxis.set_major_formatter(mticker.StrMethodFormatter("${x:,.0f}"))
-    ax.annotate("+37.1%", xy=(2021, 1400), xytext=(2013.8, 1850),
-                arrowprops=dict(arrowstyle="->", color=ORANGE), color=ORANGE, fontweight="bold")
+    ax.set_ylabel("2021 CAD per month")
+    style_year_axis(ax)
+    ax.set_ylim(0, 2500)
+    ax.yaxis.set_major_formatter(mticker.StrMethodFormatter("{x:,.0f}"))
+    ax.annotate(
+        "+37.1%",
+        xy=(2, 1400),
+        xytext=(1.05, 2050),
+        arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.1),
+        color=ORANGE,
+        fontweight="bold",
+        fontsize=10,
+    )
     ax.legend(loc="upper left")
 
     ax = axes[1, 0]
-    ax.plot(years, stir30, "o-", color=GOLD, lw=2.4, ms=8, label="STIR > 30%")
-    ax.plot(years, stir50, "s--", color=SLATE, lw=2.0, ms=7, label="STIR > 50%")
-    ax.axhline(30, color="0.5", ls=":", lw=1)
+    ax.plot(x, stir30, "o-", color=ORANGE, lw=2.2, ms=7, label="STIR > 30%")
+    ax.plot(x, stir50, "s--", color=SLATE, lw=1.8, ms=6, label="STIR > 50%")
+    ax.axhline(30, color="#888888", ls=":", lw=0.9)
     ax.set_title("C. Traditional affordability (STIR)")
-    ax.set_ylabel("Share of households (%)")
+    ax.set_ylabel("Share of records (%)")
     ax.set_xlabel("Census year")
-    ax.set_xticks(years)
-    ax.set_ylim(0, 70)
+    style_year_axis(ax)
+    ax.set_ylim(0, 75)
     ax.legend(loc="upper right")
 
     ax = axes[1, 1]
-    ax.plot(years, hardship, "D-", color=RED, lw=2.4, ms=8)
-    ax.fill_between(years, hardship, color=RED, alpha=0.10)
+    ax.plot(x, hardship, "D-", color=RED, lw=2.2, ms=7)
     ax.set_title("D. Housing hardship (residual income < MBM)")
-    ax.set_ylabel("Share of households (%)")
+    ax.set_ylabel("Share of records (%)")
     ax.set_xlabel("Census year")
-    ax.set_xticks(years)
+    style_year_axis(ax)
     ax.set_ylim(0, 55)
-    for x, y in zip(years, hardship):
-        ax.annotate(f"{y:.1f}%", (x, y), textcoords="offset points", xytext=(0, 8),
-                    ha="center", fontsize=9, fontweight="bold")
-    ax.annotate("15-year change: −0.2 pp", xy=(0.04, 0.08), xycoords="axes fraction",
-                fontsize=9, color=SLATE)
+    for xi, y in zip(x, hardship):
+        ax.annotate(
+            f"{y:.1f}%",
+            (xi, y),
+            textcoords="offset points",
+            xytext=(0, 9),
+            ha="center",
+            fontsize=9,
+            fontweight="bold",
+            color=INK,
+        )
+    ax.text(
+        0.03,
+        0.07,
+        "15-year change: −0.2 pp",
+        transform=ax.transAxes,
+        fontsize=9,
+        color=SLATE,
+    )
 
-    fig.tight_layout()
-    savefig(fig, "fig01_national_trends.png")
+    savefig(fig, "fig01_national_trends")
 
 
 def fig02_period_comparison() -> None:
-    periods = ["2006–2011\n(crisis + recovery)", "2011–2021\n(expansion + COVID)"]
+    periods = ["2006–2011", "2011–2021"]
     inc_chg = [33.29, 0.17]
     shel_chg = [34.95, 1.63]
-    hard_chg = [-4.17, 3.99]
-    colors_inc = [GREEN if v > 0 else RED for v in inc_chg]
-    colors_shel = [RED if v > 0 else GREEN for v in shel_chg]
-    colors_hard = [GREEN if v < 0 else RED for v in hard_chg]
+    # Published one-decimal values (Table 5 / results text). Bar heights use
+    # the same rounded figures so the figure and tables do not disagree.
+    hard_chg = [-4.1, 4.0]
+    up = "#4C72B0"
+    down = "#C44E52"
 
-    fig, axes = plt.subplots(1, 3, figsize=(11.4, 4.6))
+    fig, axes = plt.subplots(1, 3, figsize=(11.2, 4.8), constrained_layout=True)
     fig.suptitle(
-        "Figure 2. Which period was worse? Income, shelter, and hardship changes",
+        "Period changes in income, shelter cost, and housing hardship",
         fontsize=13,
         fontweight="bold",
+        color=INK,
     )
 
-    for ax, vals, colors, title, ylab, fmt in [
-        (axes[0], inc_chg, colors_inc, "A. Median income", "Percent change", "{:+.1f}%"),
-        (axes[1], shel_chg, colors_shel, "B. Median shelter cost", "Percent change", "{:+.1f}%"),
-        (axes[2], hard_chg, colors_hard, "C. Housing hardship", "Percentage points", "{:+.1f} pp"),
-    ]:
-        bars = ax.bar(periods, vals, color=colors, edgecolor="white", width=0.62)
-        ax.axhline(0, color="0.3", lw=0.8)
+    specs = [
+        (inc_chg, "A. Median income", "Percent change", "{:+.1f}%", True),
+        (shel_chg, "B. Median shelter cost", "Percent change", "{:+.1f}%", False),
+        (hard_chg, "C. Housing hardship", "Percentage points", "{:+.1f} pp", False),
+    ]
+    for ax, (vals, title, ylab, fmt, higher_is_gain) in zip(axes, specs):
+        colors = []
+        for v in vals:
+            if higher_is_gain:
+                colors.append(up if v >= 0 else down)
+            else:
+                colors.append(down if v > 0 else up)
+        bars = ax.bar(periods, vals, color=colors, edgecolor=INK, linewidth=0.4, width=0.58)
+        ax.axhline(0, color=INK, lw=0.8)
         ax.set_title(title)
         ax.set_ylabel(ylab)
-        ymax = max(abs(min(vals)), abs(max(vals))) * 1.45
+        ymax = max(abs(min(vals)), abs(max(vals))) * 1.55
         ax.set_ylim(-ymax, ymax)
+        ax.set_xlabel("")
         for bar, v in zip(bars, vals):
-            offset = 8 if v >= 0 else -14
-            ax.annotate(fmt.format(v), (bar.get_x() + bar.get_width() / 2, v),
-                        textcoords="offset points", xytext=(0, offset),
-                        ha="center", fontweight="bold", fontsize=10)
+            va = "bottom" if v >= 0 else "top"
+            yoff = 0.04 * ymax if v >= 0 else -0.04 * ymax
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                v + yoff,
+                fmt.format(v),
+                ha="center",
+                va=va,
+                fontweight="bold",
+                fontsize=10,
+                color=INK,
+            )
 
-    fig.tight_layout()
-    savefig(fig, "fig02_period_comparison.png")
+    fig.text(
+        0.5,
+        -0.02,
+        "2006–2011 = crisis and recovery.  2011–2021 = expansion and COVID-19.  "
+        "Blue = income up or hardship down.  Red = shelter up or hardship up.",
+        ha="center",
+        fontsize=8.5,
+        color=SLATE,
+    )
+    savefig(fig, "fig02_period_comparison")
 
 
 def fig03_tenure_divergence() -> None:
-    fig, ax = plt.subplots(figsize=(8.6, 5.2))
+    fig, ax = plt.subplots(figsize=(8.8, 5.2), constrained_layout=True)
     own_y = [2011, 2021]
     own_v = [31.41, 35.60]
     rent_y = [2006, 2011, 2021]
     rent_v = [38.03, 40.38, 43.64]
 
-    ax.plot(own_y, own_v, "o-", color=TEAL, lw=2.6, ms=9, label="Owners")
-    ax.plot(rent_y, rent_v, "s-", color=ORANGE, lw=2.6, ms=9, label="Renters")
-    ax.plot([2011, 2011], [31.41, 40.38], color="0.55", ls=":", lw=1.2)
-    ax.plot([2021, 2021], [35.60, 43.64], color="0.55", ls=":", lw=1.2)
-    ax.annotate("9.0 pp gap", xy=(2011, 35.9), ha="right", fontsize=9, color=SLATE)
-    ax.annotate("8.0 pp gap", xy=(2021, 39.6), ha="left", fontsize=9, color=SLATE)
-    ax.set_title("Figure 3. Owner versus renter housing hardship (2006–2021)")
+    ax.plot(xpos(own_y), own_v, "o-", color=TEAL, lw=2.3, ms=8, label="Owners")
+    ax.plot(xpos(rent_y), rent_v, "s-", color=ORANGE, lw=2.3, ms=8, label="Renters")
+    ax.plot([1, 1], [31.41, 40.38], color="#888888", ls=":", lw=1.0)
+    ax.plot([2, 2], [35.60, 43.64], color="#888888", ls=":", lw=1.0)
+    ax.annotate("9.0 pp gap", xy=(1.04, 35.9), ha="left", va="center", fontsize=9, color=SLATE)
+    ax.annotate("8.0 pp gap", xy=(1.96, 39.6), ha="right", va="center", fontsize=9, color=SLATE)
+    ax.set_title("Owner versus renter housing hardship, 2006–2021")
     ax.set_xlabel("Census year")
     ax.set_ylabel("Housing hardship rate (%)")
-    ax.set_xticks([2006, 2011, 2021])
-    ax.set_ylim(20, 55)
+    style_year_axis(ax)
+    ax.set_ylim(18, 52)
     ax.legend(loc="upper left")
     ax.text(
         0.02,
-        0.04,
-        "Owner hardship unavailable for 2006 (tenure coding). Both groups worsened 2011–2021.",
+        0.045,
+        "Owner hardship is unavailable for 2006 after tenure cleaning. Both groups worsened 2011–2021.",
         transform=ax.transAxes,
-        fontsize=8,
+        fontsize=8.5,
         color=SLATE,
     )
-    fig.tight_layout()
-    savefig(fig, "fig03_tenure_divergence.png")
+    savefig(fig, "fig03_tenure_divergence")
 
 
 def fig04_income_shelter_squeeze() -> None:
     inc_idx = [100.0, 133.29, 133.52]
     shel_idx = [100.0, 134.95, 137.15]
+    x = xpos(years)
 
-    fig, ax = plt.subplots(figsize=(8.8, 5.3))
-    ax.plot(years, inc_idx, "o-", color=TEAL, lw=2.6, ms=9, label="Median income (2021 $)")
-    ax.plot(years, shel_idx, "s-", color=ORANGE, lw=2.6, ms=9, label="Median shelter cost (2021 $)")
-    ax.axhline(100, color="0.5", ls="--", lw=1, label="2006 baseline = 100")
-    ax.fill_between(years, inc_idx, shel_idx, color=RED, alpha=0.12, label="Affordability squeeze")
-    ax.annotate("133.5", (2021, 133.52), textcoords="offset points", xytext=(-28, -14),
-                color=TEAL, fontweight="bold")
-    ax.annotate("137.1", (2021, 137.15), textcoords="offset points", xytext=(8, 4),
-                color=ORANGE, fontweight="bold")
-    ax.set_title("Figure 4. The income–shelter squeeze (indexed, 2006 = 100)")
+    fig, ax = plt.subplots(figsize=(8.8, 5.3), constrained_layout=True)
+    ax.plot(x, inc_idx, "o-", color=TEAL, lw=2.3, ms=8, label="Median income (2021 CAD)")
+    ax.plot(x, shel_idx, "s-", color=ORANGE, lw=2.3, ms=8, label="Median shelter cost (2021 CAD)")
+    ax.axhline(100, color="#888888", ls="--", lw=1, label="2006 baseline = 100")
+    ax.fill_between(x, inc_idx, shel_idx, color=RED, alpha=0.12, label="Affordability squeeze")
+    ax.annotate(
+        "133.5",
+        (2, 133.52),
+        textcoords="offset points",
+        xytext=(-36, -16),
+        color=TEAL,
+        fontweight="bold",
+    )
+    ax.annotate(
+        "137.1",
+        (2, 137.15),
+        textcoords="offset points",
+        xytext=(8, 6),
+        color=ORANGE,
+        fontweight="bold",
+    )
+    ax.set_title("The income–shelter squeeze (indexed, 2006 = 100)")
     ax.set_xlabel("Census year")
     ax.set_ylabel("Index (2006 = 100)")
-    ax.set_xticks(years)
-    ax.set_ylim(90, 155)
+    style_year_axis(ax)
+    ax.set_ylim(88, 158)
     ax.legend(loc="upper left")
-    fig.tight_layout()
-    savefig(fig, "fig04_income_shelter_squeeze.png")
+    savefig(fig, "fig04_income_shelter_squeeze")
 
 
 def fig05_summary_dashboard() -> None:
-    fig = plt.figure(figsize=(11.4, 7.4))
+    fig = plt.figure(figsize=(11.2, 7.6), constrained_layout=True)
     fig.suptitle(
-        "Figure 5. Summary dashboard: Canada’s housing squeeze, 2006–2021",
+        "Summary dashboard: Canada’s housing squeeze, 2006–2021",
         fontsize=13,
         fontweight="bold",
+        color=INK,
     )
-    gs = fig.add_gridspec(2, 3, hspace=0.42, wspace=0.32)
+    gs = fig.add_gridspec(2, 3, height_ratios=[1.15, 1.0])
 
     ax = fig.add_subplot(gs[0, :])
-    colors = [GOLD, TEAL, RED]
-    bars = ax.bar([str(y) for y in years], hardship, color=colors, edgecolor="white", width=0.55)
+    colors = [ORANGE, TEAL, RED]
+    bars = ax.bar(
+        YEAR_LABELS,
+        hardship,
+        color=colors,
+        edgecolor=INK,
+        linewidth=0.4,
+        width=0.52,
+    )
     ax.set_title("Housing hardship rate (residual income below MBM)")
-    ax.set_ylabel("Percent of households")
-    ax.set_ylim(0, 50)
+    ax.set_ylabel("Percent of records")
+    ax.set_ylim(0, 52)
+    ax.set_xlim(-0.55, 2.55)
     for bar, v, c in zip(bars, hardship, hardship_n):
-        ax.annotate(f"{v:.1f}%\n(n={c:,})", (bar.get_x() + bar.get_width() / 2, v),
-                    textcoords="offset points", xytext=(0, 6), ha="center", fontsize=9)
+        ax.annotate(
+            f"{v:.1f}%\n(n={c:,})",
+            (bar.get_x() + bar.get_width() / 2, v),
+            textcoords="offset points",
+            xytext=(0, 8),
+            ha="center",
+            fontsize=9,
+            color=INK,
+        )
 
     ax = fig.add_subplot(gs[1, 0])
-    ax.plot(years, [v / 1000 for v in inc_med], "o-", color=TEAL, lw=2.4, ms=8)
+    ax.plot(xpos(years), [v / 1000 for v in inc_med], "o-", color=TEAL, lw=2.2, ms=7)
     ax.set_title("Median income")
-    ax.set_ylabel("2021 CAD (thousands)")
-    ax.set_xticks(years)
-    ax.set_ylim(0, 60)
-    ax.annotate("$46,000\n(+33.5%)", (2021, 46), textcoords="offset points",
-                xytext=(-6, 10), ha="right", fontsize=8, color=TEAL)
+    ax.set_ylabel("Thousands of 2021 CAD")
+    style_year_axis(ax)
+    ax.set_ylim(0, 62)
+    ax.annotate(
+        "$46,000\n(+33.5%)",
+        (2, 46),
+        textcoords="offset points",
+        xytext=(-8, 12),
+        ha="right",
+        fontsize=8,
+        color=TEAL,
+    )
 
     ax = fig.add_subplot(gs[1, 1])
-    ax.plot(years, shel_med, "s-", color=ORANGE, lw=2.4, ms=8)
+    ax.plot(xpos(years), shel_med, "s-", color=ORANGE, lw=2.2, ms=7)
     ax.set_title("Median monthly shelter")
     ax.set_ylabel("2021 CAD")
-    ax.set_xticks(years)
-    ax.set_ylim(0, 1800)
-    ax.annotate("$1,400\n(+37.1%)", (2021, 1400), textcoords="offset points",
-                xytext=(-6, 10), ha="right", fontsize=8, color=ORANGE)
+    style_year_axis(ax)
+    ax.set_ylim(0, 1900)
+    ax.yaxis.set_major_formatter(mticker.StrMethodFormatter("{x:,.0f}"))
+    ax.annotate(
+        "$1,400\n(+37.1%)",
+        (2, 1400),
+        textcoords="offset points",
+        xytext=(-8, 12),
+        ha="right",
+        fontsize=8,
+        color=ORANGE,
+    )
 
     ax = fig.add_subplot(gs[1, 2])
-    ax.plot([2011, 2021], [31.41, 35.60], "o-", color=TEAL, lw=2.4, ms=8, label="Owners")
-    ax.plot([2011, 2021], [40.38, 43.64], "s-", color=ORANGE, lw=2.4, ms=8, label="Renters")
+    ax.plot([1, 2], [31.41, 35.60], "o-", color=TEAL, lw=2.2, ms=7, label="Owners")
+    ax.plot([1, 2], [40.38, 43.64], "s-", color=ORANGE, lw=2.2, ms=7, label="Renters")
     ax.set_title("Hardship by tenure")
     ax.set_ylabel("Percent")
-    ax.set_xticks([2011, 2021])
-    ax.set_ylim(20, 55)
+    style_year_axis(ax)
+    ax.set_ylim(18, 55)
     ax.legend(loc="upper left", fontsize=8)
 
-    savefig(fig, "fig05_summary_dashboard.png")
+    savefig(fig, "fig05_summary_dashboard")
 
 
 def write_csv(name: str, df: pd.DataFrame) -> None:
@@ -357,8 +537,9 @@ def write_tables() -> None:
         ],
         r"Notes: All dollar values converted to 2021 constant dollars using CPI multipliers "
         r"(2006 $\times$ 1.276; 2011 $\times$ 1.148). Census 2016 is excluded because valid-record "
-        r"retention was 9.4\%. Median income is reported instead of the mean because hierarchical "
-        r"PUMF files produce inflated household-level means.",
+        r"retention was 9.4\%. Estimates are unweighted person-records from hierarchical PUMF files. "
+        r"Median income is reported instead of the mean because hierarchical PUMF files produce "
+        r"inflated household-level means.",
     )
 
     t2 = pd.DataFrame(

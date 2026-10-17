@@ -1,26 +1,18 @@
-# Paper 1 figures and tables
+# Paper 1 figures and tables (Draft 3.0)
 
-Standalone assets for the high-school manuscript. Publication figures are 300 dpi PNG. JPEG copies are Drive previews. Tables are CSV (spreadsheets) plus `\input`-able `.tex`.
+Publication figures are vector PDF + SVG + 300 dpi PNG. Tables are CSV plus `\input`-able `.tex`.
 
 ## Figures
 
-| File | Content |
+| Stem | Content |
 |---|---|
-| `figures/fig01_national_trends.png` | Income, shelter, STIR, residual-income hardship, 2006–2021 |
-| `figures/fig02_period_comparison.png` | 2006–2011 vs 2011–2021 income, shelter, hardship |
-| `figures/fig03_tenure_divergence.png` | Owner vs renter hardship |
-| `figures/fig04_income_shelter_squeeze.png` | Indexed squeeze, 2006 = 100 |
-| `figures/fig05_summary_dashboard.png` | Four-panel summary |
+| `figures/fig01_national_trends.{pdf,svg,png}` | Income, shelter, STIR, residual-income hardship, 2006–2021 |
+| `figures/fig02_period_comparison.{pdf,svg,png}` | 2006–2011 vs 2011–2021 income, shelter, hardship |
+| `figures/fig03_tenure_divergence.{pdf,svg,png}` | Owner vs renter hardship |
+| `figures/fig04_income_shelter_squeeze.{pdf,svg,png}` | Indexed squeeze, 2006 = 100 |
+| `figures/fig05_summary_dashboard.{pdf,svg,png}` | Four-panel summary |
 
-Google Drive (`Manuscript_Draft / Paper1_HighSchool_LaTeX / figures`):
-
-- Fig 1: https://drive.google.com/file/d/1ndRCClYuO7IxFjIP6V7psZxtyzLLp2nY/view
-- Fig 2: https://drive.google.com/file/d/1UwLycZRwjSuRHiPerYSLY5FhD2q9cm4P/view
-- Fig 3: https://drive.google.com/file/d/1qKSyUCAscHsVDKUkAQsH58S3YpYYNlGz/view
-- Fig 4: https://drive.google.com/file/d/1fbvmk4w6TwangbXTcwyEWwn-ufZJEbEp/view
-- Fig 5: https://drive.google.com/file/d/1i4S6IhioFtDcUizwDGcpMkc6u_r_tSW5/view
-
-Folder: https://drive.google.com/drive/folders/1fUTPEFuF-bgigiGZL4iVp9vrj3XREX5w
+LaTeX includes the PDF files. Rebuild with `python3 generate_figures_tables.py`.
 
 ## Tables
 
@@ -32,14 +24,36 @@ Folder: https://drive.google.com/drive/folders/1fUTPEFuF-bgigiGZL4iVp9vrj3XREX5w
 | `tables/table04_summary_2006_2021` | 15-year summary |
 | `tables/table05_period_changes` | Period-over-period changes |
 
-Google Sheets:
+## Drive
 
-- Table 1: https://docs.google.com/spreadsheets/d/19opdY0uOkFzBxXDMmZ6Lda8DM6CqyOI3PpLeF4KGA1w
-- Table 2: https://docs.google.com/spreadsheets/d/1KoHzXpPrb1oxRz4N4UJl7hrUgHuz8zIGe7RxzYDyojo
-- Table 3: https://docs.google.com/spreadsheets/d/12NjPPfA7HwxnR1OWC8r6gdlRRkmOUFV2PSFrrPUUNZ4
-- Table 4: https://docs.google.com/spreadsheets/d/1VL1w4rIdjM5BUWQlmaZ82afwOYwdUIzpvJYQL3s7bBg
-- Table 5: https://docs.google.com/spreadsheets/d/1_ECxl0nnyNDL-zCX28szlBRCY8vSr7PgpWPIl3ax57Y
+- Package folder: https://drive.google.com/drive/folders/1DrIvYHuCTvQOEqzp1IfHwCw5RcEhxf2m
+- Draft 3.0 (current): https://drive.google.com/drive/folders/1bhoL_OB66mXfrkGX_ZPMl4EHJg2vS9Me
+- Draft 2.0 archive: https://drive.google.com/drive/folders/1O5JEzOkNVJnS2aA2oYiPEbGtmIxFE_Jg
+- Readable cover: https://docs.google.com/document/d/1lUiSVj6VeA7NUENlWntn7kSGc1OHp5gqLnXt9ie_Io8/edit
 
-Folder: https://drive.google.com/drive/folders/1-6RvtLyoyG6-DkS0_SsDGZvTn_a8T76h
+### Draft 3.0 figures folder (`1l5zei4CKY_3-W3opV0OFhrQI3Jz6R4qA`)
 
-Rebuild with `python3 generate_figures_tables.py`.
+| File | Drive id | Notes |
+|---|---|---|
+| `fig01_national_trends.pdf` | `1AUhEzuNPo1B6Cnn78zpUlrpjnr_OH63S` | vector |
+| `fig01_national_trends.svg` | `1Aon-tyT0qIQ7dqh571RWMI7HY5jts9fo` | vector |
+| `fig01_national_trends_preview.png` | `1T6vqMgii3tI497uOyVRVhid9FEa9k3EI` | 1100 px viewing copy |
+| `fig02_period_comparison.pdf` | `1WijIYCDPeEa3W51S7TxpbTo7CtLXcLRt` | vector |
+| `fig02_period_comparison.svg` | `1OpG72AwT9-g3v6iju5ucHm66C0hUtqHR` | vector |
+| `fig02_period_comparison_preview.png` | `1_4UPEmpCEQ7mbOcjkSXoIpwdusPL8DXU` | 1100 px viewing copy |
+| `fig03_tenure_divergence.pdf` | `154BMTJxIqIOh0yptEuF8qkcSOh0Flkx2` | vector |
+| `fig03_tenure_divergence.svg` | `1fSuI2yWwOuTLt8SKchYO1mJaw96LygGW` | vector |
+| `fig03_tenure_divergence_preview.png` | `1FTO5exmGBizTnGpipRjlFBlTZrp-Yehj` | 1100 px viewing copy |
+| `fig04_income_shelter_squeeze.svg` | `19aCYMiGWhrzvSNxKt_7SibiC8gH25U1G` | vector |
+| `fig04_income_shelter_squeeze_preview.png` | `1s47INm4LGoWg0mBgLdpy_YNoQuGi9a8T` | 1100 px viewing copy |
+| `fig05_summary_dashboard.svg` | `1UQxIOUhsBxeguGQ7wHYf1Tz8gt-Ynsox` | vector |
+| `fig05_summary_dashboard_preview.png` | `1IwThGDm_hCMg2WzcBsWFSpt6IDL2tJJ8` | 1100 px viewing copy |
+
+The compiled `paper1_highschool.pdf` (258 KB) and the five 300 dpi PNGs (168–410 KB) are in this git package. The Drive `create_file` tool rejects a single ~30–340 KB base64 payload, so those binaries stay in the repository rather than as truncated Drive files. Use the vector PDFs/SVGs on Drive, or compile locally:
+
+```
+cd papers/paper1_highschool
+python3 generate_figures_tables.py
+pdflatex paper1_highschool.tex
+pdflatex paper1_highschool.tex
+```

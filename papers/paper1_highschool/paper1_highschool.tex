@@ -29,8 +29,8 @@
 \title{\textbf{Fifteen Years of Housing Crisis in Canada, 2006--2021:\\
 A High-School Research Paper Using Residual Income}}
 \author{High School Research Paper\\[0.4em]
-\large Draft Version 2.0}
-\date{16 October 2026}
+\large Draft Version 3.0}
+\date{17 October 2026}
 
 \begin{document}
 \maketitle
@@ -45,8 +45,9 @@ This paper asks how Canadian housing hardship changed from 2006 to 2021 when har
 
 \noindent\textbf{Methods.}
 We analysed 777,707 valid person-records from the Census 2006, 2011, and 2021 Public Use Microdata Files.
+These are unweighted hierarchical person-records, not household totals and not survey-weighted estimates.
 Residual income equals after-tax income minus annual shelter cost.
-Housing hardship is flagged when residual income falls below the Market Basket Measure poverty line.
+Housing hardship is flagged when residual income falls below a single-adult national Market Basket Measure leftover line, not the official region- and family-size MBM.
 All dollars are converted to 2021 constant CAD.
 Census 2016 is excluded because only 9.4\% of records survived cleaning.
 
@@ -127,11 +128,14 @@ If hardship stays high through recovery, it is structural.
 
 \subsubsection{Census Public Use Microdata Files}
 
-We used three Statistics Canada hierarchical PUMF files \cite{statcan2022pumf}:
+We used three Statistics Canada hierarchical PUMF files \cite{statcan2022pumf}.
+Hierarchical files are \textbf{person records} nested in households.
+This draft treats each cleaned person-record as the unit of analysis.
+It does \emph{not} collapse income to the household and does \emph{not} apply the PUMF sampling weight (\texttt{WEIGHT}).
 
 \begin{itemize}[leftmargin=1.4em]
-  \item \textbf{Census 2006} (\texttt{pumf-95M0029-E-2006-hierarchical}): 78,056 valid records after cleaning (23.4\% of the raw file).
-  \item \textbf{Census 2011} (\texttt{NHS-99M002X-E-2011-pumf-hierarchical}): 341,030 valid records (99.3\%).
+  \item \textbf{Census 2006} (catalogue 95M0029X hierarchical): 78,056 valid records after cleaning (23.4\% of the raw file).
+  \item \textbf{2011 National Household Survey} (catalogue 99M0002X hierarchical): 341,030 valid records (99.3\%). This wave is a voluntary survey, not a Census long form.
   \item \textbf{Census 2021} (\texttt{98M0001X2021002}): 358,621 valid records (99.1\%).
 \end{itemize}
 
@@ -140,16 +144,22 @@ We used three Statistics Canada hierarchical PUMF files \cite{statcan2022pumf}:
 Census 2016 was downloaded and inspected, then dropped.
 After the same missing-code rules, only 29,056 records (9.4\%) remained, and medians were not comparable (median income \$20,558; median shelter \$649).
 Those values are data-quality artefacts, not a real 2016 collapse.
+Shelter cost is \texttt{GROSRT} (gross rent) on the pre-2016 files used here and \texttt{SHELCO} (unified shelter cost) on 2021.
+Those concepts are related but not a fully harmonized shelter series.
+Owner's major payments (\texttt{OMP}) were not used, so 2006 owner hardship could not be estimated.
 
 \subsubsection{Market Basket Measure thresholds}
 
-Year-specific national-average MBM lines for a single adult were:
+Year-specific national-average leftover lines for a \textbf{single adult} were:
 \begin{itemize}[leftmargin=1.4em]
   \item 2006: \$13,500
   \item 2011: \$15,000
   \item 2021: \$19,728
 \end{itemize}
-These are the leftover amounts needed for non-housing essentials in each year.
+These are \emph{not} Statistics Canada's official region- and family-size MBM thresholds (catalogue 75F0002M).
+They are a simplified national leftover basket used so that three waves can be compared with one rule.
+A large family in Toronto and a single adult in a smaller city are judged against the same dollar line.
+That is a real limitation, not a rounding detail.
 
 \subsection{Variable construction}
 \label{sec:vars}
@@ -207,7 +217,8 @@ For each year we report:
   \item hardship by tenure where tenure is available.
 \end{itemize}
 We then compute percent changes in medians and percentage-point changes in rates.
-We report medians, not means, because hierarchical PUMF files produce inflated household-level means.
+We report medians, not means, because hierarchical PUMF files produce inflated household-level means when special income codes are left in the average.
+Rates are unweighted shares of valid person-records.
 
 Five figures and five tables were saved as separate files (see Appendices~\ref{app:figures} and~\ref{app:tables}) and included below with \texttt{\textbackslash includegraphics} and \texttt{\textbackslash input}.
 
@@ -236,7 +247,7 @@ The interquartile range for shelter stays wide: about \$800 to \$2,100.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{fig01_national_trends.png}
+  \includegraphics[width=\textwidth]{fig01_national_trends.pdf}
   \caption{Fifteen-year national trends, 2006--2021.
   Panel~A: inflation-adjusted median income with the 25th--75th percentile band.
   Panel~B: inflation-adjusted median monthly shelter cost with the same band.
@@ -284,10 +295,10 @@ The leftover-income test still flags them.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.98\textwidth]{fig02_period_comparison.png}
+  \includegraphics[width=0.98\textwidth]{fig02_period_comparison.pdf}
   \caption{Period comparison.
-  Green bars are improvements (income up, or hardship down).
-  Red bars are deteriorations (shelter up, or hardship up).
+  Blue bars are income gains or hardship declines.
+  Red bars are shelter-cost increases or hardship increases.
   The 2011--2021 expansion erased the 2006--2011 hardship gain.}
   \label{fig:periods}
 \end{figure}
@@ -303,7 +314,7 @@ A strong national economy did not repair leftover income.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.88\textwidth]{fig03_tenure_divergence.png}
+  \includegraphics[width=0.88\textwidth]{fig03_tenure_divergence.pdf}
   \caption{Owner versus renter hardship.
   Renters stay higher.
   The gap narrowed from 9.0~pp to 8.0~pp because owners caught up, not because renters recovered.}
@@ -321,7 +332,7 @@ Owning a home is not a guarantee of leftover-income security, especially with la
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.88\textwidth]{fig04_income_shelter_squeeze.png}
+  \includegraphics[width=0.88\textwidth]{fig04_income_shelter_squeeze.pdf}
   \caption{Income and shelter indexed to 2006 = 100.
   The shaded gap is the cumulative squeeze.
   By 2021 the shelter index (137.1) sits 3.6 points above the income index (133.5).}
@@ -339,7 +350,7 @@ After that, shelter stays a little higher and leftover income erodes.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\textwidth]{fig05_summary_dashboard.png}
+  \includegraphics[width=\textwidth]{fig05_summary_dashboard.pdf}
   \caption{Summary dashboard.
   Hardship returns to the 2006 level.
   Median income and shelter both rise, but shelter rises more.
@@ -410,12 +421,15 @@ Our national persistence result can still be true while some cities are much wor
 \label{sec:limits}
 
 \begin{enumerate}[leftmargin=1.6em]
-  \item \textbf{2006 completeness.} Only 23.4\% of 2006 records survived cleaning, versus 99\%+ later. If missing 2006 records were poorer households, the 2006--2011 improvement is overstated.
-  \item \textbf{No usable 2016 wave.} We cannot split 2011--2016 recovery from 2016--2021 peak-and-COVID.
-  \item \textbf{Simplified MBM.} A national single-adult line understates hardship for large families and high-cost cities and overstates it for singles in cheaper regions.
+  \item \textbf{Unweighted person-records.} Hierarchical PUMF files include a person weight (\texttt{WEIGHT}). This draft does not use it. Reported rates are shares of cleaned records, not official household population estimates.
+  \item \textbf{Record type.} Each row is a person. After-tax income is the person field \texttt{TOTINC\_AT}, not the sum of household members. Shelter is a dwelling-level concept stored on person rows. Mixing those units can bias leftover income, especially in multi-person households.
+  \item \textbf{2006 completeness.} Only 23.4\% of 2006 records survived cleaning, versus 99\%+ later. Pre-2016 cleaning kept \texttt{GROSRT} (rent) and dropped owners coded not-applicable. If missing 2006 records were poorer households, the 2006--2011 improvement is overstated.
+  \item \textbf{No usable 2016 wave.} After the same missing-code rules, 9.4\% of the 2016-labelled file remained. We cannot split 2011--2016 recovery from 2016--2021 peak-and-COVID.
+  \item \textbf{Census / NHS harmonization.} 2011 is the voluntary National Household Survey. Shelter names change from \texttt{GROSRT}/\texttt{OMP} to \texttt{SHELCO}. After-tax income missing codes are not identical across years. The three waves are comparable only after those caveats.
+  \item \textbf{Simplified MBM.} A national single-adult leftover line understates hardship for large families and high-cost cities and overstates it for singles in cheaper regions. It is not the official 75F0002M table.
   \item \textbf{Cross-sections, not a panel.} We see snapshots, not the same households moving in and out of hardship.
   \item \textbf{No CMA split.} National rates hide Toronto/Vancouver versus Atlantic or Prairie patterns.
-  \item \textbf{Broken PUMF means.} Hierarchical files inflate mean income. We therefore never interpret the mean; we use medians and percentiles.
+  \item \textbf{Broken PUMF means.} Hierarchical files inflate mean income when special codes remain. We therefore never interpret the mean; we use medians and percentiles.
 \end{enumerate}
 
 \subsection{Policy implications}
@@ -505,20 +519,20 @@ Walks, A., and Twigge-Molecey, A.
 \section{Figure files (saved separately)}
 \label{app:figures}
 
-All figures are 300~dpi PNG files in \texttt{papers/paper1\_highschool/figures/}.
-The LaTeX file includes them with \texttt{\textbackslash includegraphics}.
+Each figure is exported as vector PDF, SVG, and 300~dpi PNG in the local \texttt{figures/} folder.
+The manuscript includes the PDF files with \texttt{\textbackslash includegraphics}.
 
 \begin{center}
 \small
 \begin{tabular}{lll}
 \toprule
-File & Figure & Content \\
+File stem & Figure & Content \\
 \midrule
-\texttt{fig01\_national\_trends.png} & Fig.~\ref{fig:national} & Income, shelter, STIR, hardship \\
-\texttt{fig02\_period\_comparison.png} & Fig.~\ref{fig:periods} & 2006--2011 vs 2011--2021 \\
-\texttt{fig03\_tenure\_divergence.png} & Fig.~\ref{fig:tenure} & Owners vs renters \\
-\texttt{fig04\_income\_shelter\_squeeze.png} & Fig.~\ref{fig:squeeze} & Indexed squeeze \\
-\texttt{fig05\_summary\_dashboard.png} & Fig.~\ref{fig:dash} & Four-panel summary \\
+\texttt{fig01\_national\_trends.pdf} & Fig.~\ref{fig:national} & Income, shelter, STIR, hardship \\
+\texttt{fig02\_period\_comparison.pdf} & Fig.~\ref{fig:periods} & 2006--2011 vs 2011--2021 \\
+\texttt{fig03\_tenure\_divergence.pdf} & Fig.~\ref{fig:tenure} & Owners vs renters \\
+\texttt{fig04\_income\_shelter\_squeeze.pdf} & Fig.~\ref{fig:squeeze} & Indexed squeeze \\
+\texttt{fig05\_summary\_dashboard.pdf} & Fig.~\ref{fig:dash} & Four-panel summary \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -527,7 +541,7 @@ File & Figure & Content \\
 \label{app:tables}
 
 Each table exists as CSV (for spreadsheets) and as a \texttt{.tex} snippet (for \texttt{\textbackslash input}).
-Files live in \texttt{papers/paper1\_highschool/tables/}.
+Files live in the local \texttt{tables/} folder.
 
 \begin{center}
 \small
@@ -558,10 +572,13 @@ pdflatex paper1_highschool.tex
 pdflatex paper1_highschool.tex
 \end{verbatim}
 
-\section{How this version differs from Draft 1.0}
+\section{How this version differs from Drafts 1.0 and 2.0}
 \label{app:diff}
 
-Draft 1.0 of the high-school paper used story headings (``What we discovered'') and did not ship separate figure or table files.
-This version restores a journal skeleton (Abstract, Introduction, Methods, Results, Discussion, Conclusion), saves five figures and five tables as standalone files, and includes them in \LaTeX.
+Draft 1.0 used story headings and did not ship separate figure or table files.
+Draft 2.0 restored IMRAD headings and added figures, but the Drive JPEG previews clipped Figure~1 and Figure~5, used a bright-green Figure~2 fill, and placed the 2021 tick too far right on a linear time axis.
+Draft 3.0 rebuilds all five figures from \texttt{generate\_figures\_tables.py} as PDF, SVG, and 300~dpi PNG on a white background with equally spaced year labels.
+The plotted numbers are unchanged.
+The methods and limitations sections now state the unresolved issues: unweighted person-records, person versus household units, the simplified MBM line, 2006/2016 exclusions, and Census/NHS shelter-variable harmonization.
 
 \end{document}
