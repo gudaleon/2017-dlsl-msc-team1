@@ -1,0 +1,3185 @@
+{
+  "analysis_date": "2026-10-17T19:03:44.541073+00:00",
+  "draft": "4.0",
+  "pipeline": "papers/paper1_draft4/reconstruct_four_wave.py",
+  "original_results_preserved_at": [
+    "results/four_wave_temporal_results.json",
+    "audit/original/four_wave_temporal_results.json",
+    "papers/paper1_highschool/ (Draft 3.0 frozen)"
+  ],
+  "primary_estimand": "Household residual income (sum of person TOTINC_AT \u2212 12\u00d7monthly shelter) compared with the non-shelter MBM of a four-person reference family scaled by sqrt(n)/2, national unweighted mean of Table 11-10-0066 regions, contemporaneous official MBM base, income-year current dollars. NOT an official CMHC housing-hardship rate.",
+  "results_by_year": [
+    {
+      "year": 2006,
+      "file_identity": "2006 Census hierarchical PUMF (95M0029X)",
+      "catalogue": "95M0029X",
+      "instrument": "Census long form 2B",
+      "income_year": 2005,
+      "shelter_mode": "grosrt_omp",
+      "thresholds": {
+        "mbm_base": "2000 base",
+        "n_regions": 48,
+        "ref_family_total": 27671.9375,
+        "ref_family_shelter": 7817.083333333333,
+        "ref_family_nonshelter": 19854.958333333332,
+        "single_adult_full_mbm": 13835.96875,
+        "single_adult_nonshelter": 9927.479166666666,
+        "cpi_income_year_to_2021": 1.3233644859813083,
+        "note": "2006 Census income year; 2008-base not published for 2005"
+      },
+      "all_analytic": {
+        "label": "all_analytic",
+        "sample_households": 52785,
+        "estimated_households": 5279588.219148325,
+        "mean_hh_size": 1.4548261816804016,
+        "weighted_mean_hh_size": 1.4548261816804013,
+        "median_income_at_current": 30000.0,
+        "median_income_at_2021": 39700.93457943925,
+        "median_income_at_unweighted_current": 30000.0,
+        "median_shelter_current": 600.0,
+        "median_shelter_2021": 794.018691588785,
+        "median_residual_current": 23000.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 35.97612958226769,
+          "weighted_pct": 35.97612958226769
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 27.92838874680307,
+          "weighted_pct": 27.928388746803073
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 15.445675854883016
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 52785,
+          "n_flagged": 11881,
+          "unweighted_pct": 22.508288339490385,
+          "weighted_pct": 22.508288339490385,
+          "weighted_population": 5279588.219148325,
+          "weighted_flagged": 1188344.9395036704,
+          "replicate": {
+            "point": 0.22508288339490384,
+            "se": 0.004696869165318261,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 52785,
+          "n_flagged": 11568,
+          "unweighted_pct": 21.915316851378233,
+          "weighted_pct": 21.91531685137823,
+          "weighted_population": 5279588.219148325,
+          "weighted_flagged": 1157038.4866743926,
+          "replicate": {
+            "point": 0.2191531685137823,
+            "se": 0.0050536254924762256,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 52785,
+          "n_flagged": 18073,
+          "unweighted_pct": 34.23889362508288,
+          "weighted_pct": 34.23889362508288,
+          "weighted_population": 5279588.219148325,
+          "weighted_flagged": 1807672.5941966027,
+          "replicate": {
+            "point": 0.34238893625082883,
+            "se": 0.005257281976436796,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 52785,
+          "n_flagged": 10795,
+          "unweighted_pct": 20.45088566827697,
+          "weighted_pct": 20.450885668276975,
+          "weighted_population": 5279588.219148325,
+          "weighted_flagged": 1079722.5504538442,
+          "replicate": {
+            "point": 0.20450885668276975,
+            "se": 0.00441044958464558,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 52785,
+          "n_flagged": 11319,
+          "unweighted_pct": 21.443591929525432,
+          "weighted_pct": 21.443591929525436,
+          "weighted_population": 5279588.219148325,
+          "weighted_flagged": 1132133.3532734658,
+          "replicate": {
+            "point": 0.21443591929525435,
+            "se": 0.004376228997048851,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "owners": {
+        "label": "owners",
+        "sample_households": 30177,
+        "estimated_households": 3018322.131083432,
+        "mean_hh_size": 1.5604599529442953,
+        "weighted_mean_hh_size": 1.5604599529442955,
+        "median_income_at_current": 37000.0,
+        "median_income_at_2021": 48964.485981308404,
+        "median_income_at_unweighted_current": 37000.0,
+        "median_shelter_current": 500.0,
+        "median_shelter_2021": 661.6822429906541,
+        "median_residual_current": 29400.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 24.999171554495145,
+          "weighted_pct": 24.99917155449515
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 18.096563608045862,
+          "weighted_pct": 18.096563608045866
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 9.547005997945456
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 30177,
+          "n_flagged": 3641,
+          "unweighted_pct": 12.065480332703714,
+          "weighted_pct": 12.065480332703716,
+          "weighted_population": 3018322.131083432,
+          "weighted_flagged": 364175.0631035152,
+          "replicate": {
+            "point": 0.12065480332703717,
+            "se": 0.004335004139861782,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 30177,
+          "n_flagged": 3562,
+          "unweighted_pct": 11.803691553169632,
+          "weighted_pct": 11.803691553169635,
+          "weighted_population": 3018322.131083432,
+          "weighted_flagged": 356273.4344341448,
+          "replicate": {
+            "point": 0.11803691553169636,
+            "se": 0.004356820292710394,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 30177,
+          "n_flagged": 6383,
+          "unweighted_pct": 21.15187062994996,
+          "weighted_pct": 21.151870629949965,
+          "weighted_population": 3018322.131083432,
+          "weighted_flagged": 638431.5923619163,
+          "replicate": {
+            "point": 0.21151870629949965,
+            "se": 0.006911561572941573,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 30177,
+          "n_flagged": 3238,
+          "unweighted_pct": 10.730026178877953,
+          "weighted_pct": 10.730026178877955,
+          "weighted_population": 3018322.131083432,
+          "weighted_flagged": 323866.75482811924,
+          "replicate": {
+            "point": 0.10730026178877955,
+            "se": 0.004447880086251309,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 30177,
+          "n_flagged": 3402,
+          "unweighted_pct": 11.273486430062631,
+          "weighted_pct": 11.273486430062633,
+          "weighted_population": 3018322.131083432,
+          "weighted_flagged": 340270.135863268,
+          "replicate": {
+            "point": 0.11273486430062633,
+            "se": 0.005076009356453645,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "renters": {
+        "label": "renters",
+        "sample_households": 22608,
+        "estimated_households": 2261266.0880648913,
+        "mean_hh_size": 1.3138269639065818,
+        "weighted_mean_hh_size": 1.3138269639065818,
+        "median_income_at_current": 23000.0,
+        "median_income_at_2021": 30437.38317757009,
+        "median_income_at_unweighted_current": 22500.5,
+        "median_shelter_current": 600.0,
+        "median_shelter_2021": 794.018691588785,
+        "median_residual_current": 14800.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 50.62809624911536,
+          "weighted_pct": 50.62809624911537
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 41.05184005661713,
+          "weighted_pct": 41.05184005661713
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 23.319179051663134
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 22608,
+          "n_flagged": 8240,
+          "unweighted_pct": 36.447275300778486,
+          "weighted_pct": 36.4472753007785,
+          "weighted_population": 2261266.0880648913,
+          "weighted_flagged": 824169.8764001552,
+          "replicate": {
+            "point": 0.364472753007785,
+            "se": 0.00800088695194097,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 22608,
+          "n_flagged": 8006,
+          "unweighted_pct": 35.41224345364473,
+          "weighted_pct": 35.412243453644734,
+          "weighted_population": 2261266.0880648913,
+          "weighted_flagged": 800765.0522402478,
+          "replicate": {
+            "point": 0.3541224345364473,
+            "se": 0.007463341151374214,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 22608,
+          "n_flagged": 11690,
+          "unweighted_pct": 51.7073602264685,
+          "weighted_pct": 51.70736022646852,
+          "weighted_population": 2261266.0880648913,
+          "weighted_flagged": 1169241.0018346864,
+          "replicate": {
+            "point": 0.5170736022646852,
+            "se": 0.010571072786355077,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 22608,
+          "n_flagged": 7557,
+          "unweighted_pct": 33.426220806794056,
+          "weighted_pct": 33.42622080679406,
+          "weighted_population": 2261266.0880648913,
+          "weighted_flagged": 755855.7956257248,
+          "replicate": {
+            "point": 0.3342622080679406,
+            "se": 0.007054752478933206,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 22608,
+          "n_flagged": 7917,
+          "unweighted_pct": 35.018577494692146,
+          "weighted_pct": 35.01857749469215,
+          "weighted_population": 2261266.0880648913,
+          "weighted_flagged": 791863.2174101977,
+          "replicate": {
+            "point": 0.35018577494692155,
+            "se": 0.006074495094186135,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "one_person": {
+        "label": "one_person",
+        "sample_households": 31618,
+        "estimated_households": 3162451.8388373917,
+        "mean_hh_size": 1.0,
+        "weighted_mean_hh_size": 1.0,
+        "median_income_at_current": 24000.0,
+        "median_income_at_2021": 31760.7476635514,
+        "median_income_at_unweighted_current": 24000.0,
+        "median_shelter_current": 600.0,
+        "median_shelter_2021": 794.018691588785,
+        "median_residual_current": 16600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 46.40394711872984,
+          "weighted_pct": 46.40394711872983
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 35.44499968372446,
+          "weighted_pct": 35.44499968372446
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 20.984882029223858
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 31618,
+          "n_flagged": 9115,
+          "unweighted_pct": 28.82851540261876,
+          "weighted_pct": 28.82851540261876,
+          "weighted_population": 3162451.8388373917,
+          "weighted_flagged": 911687.9154596376,
+          "replicate": {
+            "point": 0.2882851540261876,
+            "se": 0.006613240090681931,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 31618,
+          "n_flagged": 8875,
+          "unweighted_pct": 28.069454108419258,
+          "weighted_pct": 28.06945410841925,
+          "weighted_population": 3162451.8388373917,
+          "weighted_flagged": 887682.9676033225,
+          "replicate": {
+            "point": 0.2806945410841925,
+            "se": 0.007194150502032025,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 31618,
+          "n_flagged": 13507,
+          "unweighted_pct": 42.719337086469736,
+          "weighted_pct": 42.719337086469736,
+          "weighted_population": 3162451.8388373917,
+          "weighted_flagged": 1350978.4612302058,
+          "replicate": {
+            "point": 0.42719337086469733,
+            "se": 0.009551554521295854,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 31618,
+          "n_flagged": 9115,
+          "unweighted_pct": 28.82851540261876,
+          "weighted_pct": 28.82851540261876,
+          "weighted_population": 3162451.8388373917,
+          "weighted_flagged": 911687.9154596376,
+          "replicate": {
+            "point": 0.2882851540261876,
+            "se": 0.006613240090681931,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 31618,
+          "n_flagged": 9573,
+          "unweighted_pct": 30.27705737238282,
+          "weighted_pct": 30.27705737238282,
+          "weighted_population": 3162451.8388373917,
+          "weighted_flagged": 957497.3576187725,
+          "replicate": {
+            "point": 0.3027705737238282,
+            "se": 0.006463956769750486,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "two_plus": {
+        "label": "two_plus",
+        "sample_households": 21167,
+        "estimated_households": 2117136.3803109326,
+        "mean_hh_size": 2.1342183587660037,
+        "weighted_mean_hh_size": 2.1342183587660033,
+        "median_income_at_current": 41000.0,
+        "median_income_at_2021": 54257.94392523364,
+        "median_income_at_unweighted_current": 41000.0,
+        "median_shelter_current": 600.0,
+        "median_shelter_2021": 794.018691588785,
+        "median_residual_current": 33600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 20.399678745216608,
+          "weighted_pct": 20.399678745216608
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 16.700524401190535,
+          "weighted_pct": 16.700524401190535
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 7.171540605659753
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 21167,
+          "n_flagged": 2766,
+          "unweighted_pct": 13.067510747862238,
+          "weighted_pct": 13.067510747862238,
+          "weighted_population": 2117136.3803109326,
+          "weighted_flagged": 276657.0240440327,
+          "replicate": {
+            "point": 0.13067510747862238,
+            "se": 0.002990830015395332,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 21167,
+          "n_flagged": 2693,
+          "unweighted_pct": 12.722634289223791,
+          "weighted_pct": 12.722634289223791,
+          "weighted_population": 2117136.3803109326,
+          "weighted_flagged": 269355.5190710701,
+          "replicate": {
+            "point": 0.12722634289223791,
+            "se": 0.0031254372542905105,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 21167,
+          "n_flagged": 4566,
+          "unweighted_pct": 21.57131383757736,
+          "weighted_pct": 21.57131383757736,
+          "weighted_population": 2117136.3803109326,
+          "weighted_flagged": 456694.1329663967,
+          "replicate": {
+            "point": 0.2157131383757736,
+            "se": 0.006276267233939151,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 21167,
+          "n_flagged": 1680,
+          "unweighted_pct": 7.936882883734114,
+          "weighted_pct": 7.936882883734116,
+          "weighted_population": 2117136.3803109326,
+          "weighted_flagged": 168034.63499420643,
+          "replicate": {
+            "point": 0.07936882883734116,
+            "se": 0.0023516672277319054,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 21167,
+          "n_flagged": 1746,
+          "unweighted_pct": 8.248688997023669,
+          "weighted_pct": 8.24868899702367,
+          "weighted_population": 2117136.3803109326,
+          "weighted_flagged": 174635.9956546931,
+          "replicate": {
+            "point": 0.0824868899702367,
+            "se": 0.0021976152053662214,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "cmhc_universe_drop_neg_residual": {
+        "label": "drop_neg_residual",
+        "sample_households": 50156,
+        "estimated_households": 5016634.019505604,
+        "mean_hh_size": 1.4685979743201212,
+        "weighted_mean_hh_size": 1.4685979743201214,
+        "median_income_at_current": 32000.0,
+        "median_income_at_2021": 42347.66355140186,
+        "median_income_at_unweighted_current": 32000.0,
+        "median_shelter_current": 600.0,
+        "median_shelter_2021": 794.018691588785,
+        "median_residual_current": 24001.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 32.620224898317254,
+          "weighted_pct": 32.620224898317254
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 29.14307361033575,
+          "weighted_pct": 29.143073610335758
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 11.013637451152405
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 50156,
+          "n_flagged": 9252,
+          "unweighted_pct": 18.446447085094505,
+          "weighted_pct": 18.44644708509451,
+          "weighted_population": 5016634.019505604,
+          "weighted_flagged": 925390.739860951,
+          "replicate": {
+            "point": 0.18446447085094508,
+            "se": 0.0042263463996899606,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 50156,
+          "n_flagged": 8939,
+          "unweighted_pct": 17.82239413031342,
+          "weighted_pct": 17.822394130313427,
+          "weighted_population": 5016634.019505604,
+          "weighted_flagged": 894084.2870316732,
+          "replicate": {
+            "point": 0.17822394130313426,
+            "se": 0.0046782751315362255,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 50156,
+          "n_flagged": 15444,
+          "unweighted_pct": 30.791929180955417,
+          "weighted_pct": 30.791929180955425,
+          "weighted_population": 5016634.019505604,
+          "weighted_flagged": 1544718.3945538832,
+          "replicate": {
+            "point": 0.30791929180955424,
+            "se": 0.004857409914425152,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 50156,
+          "n_flagged": 8166,
+          "unweighted_pct": 16.281202647739054,
+          "weighted_pct": 16.281202647739057,
+          "weighted_population": 5016634.019505604,
+          "weighted_flagged": 816768.3508111247,
+          "replicate": {
+            "point": 0.16281202647739057,
+            "se": 0.003912781882722793,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 50156,
+          "n_flagged": 8690,
+          "unweighted_pct": 17.3259430576601,
+          "weighted_pct": 17.325943057660105,
+          "weighted_population": 5016634.019505604,
+          "weighted_flagged": 869179.1536307463,
+          "replicate": {
+            "point": 0.17325943057660104,
+            "se": 0.003896942830404045,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "published_flags": {},
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 33290,
+          "with_shelter": 31759,
+          "analytic": 31618,
+          "pct_with_shelter": 95.40102132772604
+        },
+        "2": {
+          "households": 41721,
+          "with_shelter": 19285,
+          "analytic": 19256,
+          "pct_with_shelter": 46.223724263560314
+        },
+        "3": {
+          "households": 19774,
+          "with_shelter": 1295,
+          "analytic": 1292,
+          "pct_with_shelter": 6.549003742287852
+        },
+        "4": {
+          "households": 18683,
+          "with_shelter": 490,
+          "analytic": 487,
+          "pct_with_shelter": 2.6227051330086173
+        },
+        "5": {
+          "households": 7450,
+          "with_shelter": 40,
+          "analytic": 40,
+          "pct_with_shelter": 0.5369127516778524
+        },
+        "6": {
+          "households": 3440,
+          "with_shelter": 92,
+          "analytic": 92,
+          "pct_with_shelter": 2.6744186046511627
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "file_identity": "2011 NHS hierarchical PUMF (99M0002X)",
+      "catalogue": "99M0002X",
+      "instrument": "National Household Survey (voluntary)",
+      "income_year": 2010,
+      "shelter_mode": "grosrt_omp",
+      "thresholds": {
+        "mbm_base": "2008 base",
+        "n_regions": 49,
+        "ref_family_total": 33394.57142857143,
+        "ref_family_shelter": 8912.530612244898,
+        "ref_family_nonshelter": 24482.122448979593,
+        "single_adult_full_mbm": 16697.285714285714,
+        "single_adult_nonshelter": 12241.061224489797,
+        "cpi_income_year_to_2021": 1.215450643776824,
+        "note": "2011 NHS income year; 2008-base was the contemporaneous official MBM"
+      },
+      "all_analytic": {
+        "label": "all_analytic",
+        "sample_households": 130242,
+        "estimated_households": 13019080.41494605,
+        "mean_hh_size": 2.482570906466424,
+        "weighted_mean_hh_size": 2.4418535064566727,
+        "median_income_at_current": 54000.0,
+        "median_income_at_2021": 65634.3347639485,
+        "median_income_at_unweighted_current": 56000.0,
+        "median_shelter_current": 900.0,
+        "median_shelter_2021": 1093.9055793991415,
+        "median_residual_current": 42200.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 29.07433853902735,
+          "weighted_pct": 29.63336931679823
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 21.189017367669415,
+          "weighted_pct": 21.74438829150461
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 12.30119254389892
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 130242,
+          "n_flagged": 23038,
+          "unweighted_pct": 17.688610432886474,
+          "weighted_pct": 18.169391581797957,
+          "weighted_population": 13019080.41494605,
+          "weighted_flagged": 2365487.7009407138,
+          "replicate": {
+            "point": 0.18169391581797956,
+            "se": 0.002820829948751581,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 130242,
+          "n_flagged": 21902,
+          "unweighted_pct": 16.816387954730423,
+          "weighted_pct": 17.284414080999582,
+          "weighted_population": 13019080.41494605,
+          "weighted_flagged": 2250271.768457594,
+          "replicate": {
+            "point": 0.17284414080999583,
+            "se": 0.0029642500840668913,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 130242,
+          "n_flagged": 33492,
+          "unweighted_pct": 25.715207076058416,
+          "weighted_pct": 26.500029415769127,
+          "weighted_population": 13019080.41494605,
+          "weighted_flagged": 3450060.1396233407,
+          "replicate": {
+            "point": 0.2650002941576913,
+            "se": 0.005102523216265797,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 130242,
+          "n_flagged": 18348,
+          "unweighted_pct": 14.087621504583774,
+          "weighted_pct": 14.580570190679065,
+          "weighted_population": 13019080.41494605,
+          "weighted_flagged": 1898256.15808216,
+          "replicate": {
+            "point": 0.14580570190679065,
+            "se": 0.0025825826294081393,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 130242,
+          "n_flagged": 18359,
+          "unweighted_pct": 14.096067320833525,
+          "weighted_pct": 14.588718461743305,
+          "weighted_population": 13019080.41494605,
+          "weighted_flagged": 1899316.9880444412,
+          "replicate": {
+            "point": 0.14588718461743305,
+            "se": 0.0025886584229733926,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "owners": {
+        "label": "owners",
+        "sample_households": 90851,
+        "estimated_households": 8973136.861278653,
+        "mean_hh_size": 2.6740046889962685,
+        "weighted_mean_hh_size": 2.641885130868079,
+        "median_income_at_current": 66000.0,
+        "median_income_at_2021": 80219.74248927039,
+        "median_income_at_unweighted_current": 67000.0,
+        "median_shelter_current": 1000.0,
+        "median_shelter_2021": 1215.4506437768239,
+        "median_residual_current": 52800.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 22.96397397937282,
+          "weighted_pct": 23.19073690955645
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 15.680619916126403,
+          "weighted_pct": 15.922668552883737
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 8.723344296800715
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 90851,
+          "n_flagged": 9713,
+          "unweighted_pct": 10.69113163311356,
+          "weighted_pct": 10.845655376704851,
+          "weighted_population": 8973136.861278653,
+          "weighted_flagged": 973195.5004543533,
+          "replicate": {
+            "point": 0.10845655376704852,
+            "se": 0.0024827288160884056,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 90851,
+          "n_flagged": 9289,
+          "unweighted_pct": 10.224433412950876,
+          "weighted_pct": 10.3830520340253,
+          "weighted_population": 8973136.861278653,
+          "weighted_flagged": 931685.469390867,
+          "replicate": {
+            "point": 0.10383052034025299,
+            "se": 0.0024316932780386368,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 90851,
+          "n_flagged": 15208,
+          "unweighted_pct": 16.739496538287966,
+          "weighted_pct": 17.15264582622227,
+          "weighted_population": 8973136.861278653,
+          "weighted_flagged": 1539130.3853173247,
+          "replicate": {
+            "point": 0.17152645826222268,
+            "se": 0.003361444196070121,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 90851,
+          "n_flagged": 7386,
+          "unweighted_pct": 8.129794938965999,
+          "weighted_pct": 8.283154527409412,
+          "weighted_population": 8973136.861278653,
+          "weighted_flagged": 743258.7921756455,
+          "replicate": {
+            "point": 0.08283154527409411,
+            "se": 0.0029211304933685076,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 90851,
+          "n_flagged": 7386,
+          "unweighted_pct": 8.129794938965999,
+          "weighted_pct": 8.283154527409412,
+          "weighted_population": 8973136.861278653,
+          "weighted_flagged": 743258.7921756455,
+          "replicate": {
+            "point": 0.08283154527409411,
+            "se": 0.0029211304933685076,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "renters": {
+        "label": "renters",
+        "sample_households": 39391,
+        "estimated_households": 4045943.5536673954,
+        "mean_hh_size": 2.04104998603742,
+        "weighted_mean_hh_size": 1.9982212316562835,
+        "median_income_at_current": 33000.0,
+        "median_income_at_2021": 40109.87124463519,
+        "median_income_at_unweighted_current": 34000.0,
+        "median_shelter_current": 800.0,
+        "median_shelter_2021": 972.3605150214592,
+        "median_residual_current": 23600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 43.16722093879313,
+          "weighted_pct": 43.9219083362534
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 33.89352897870072,
+          "weighted_pct": 34.65586055742415
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 20.23618263069768
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 39391,
+          "n_flagged": 13325,
+          "unweighted_pct": 33.82752405371786,
+          "weighted_pct": 34.41205202243453,
+          "weighted_population": 4045943.5536673954,
+          "weighted_flagged": 1392292.2004863604,
+          "replicate": {
+            "point": 0.3441205202243453,
+            "se": 0.004599301819237803,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 39391,
+          "n_flagged": 12613,
+          "unweighted_pct": 32.02000456957173,
+          "weighted_pct": 32.59032859891263,
+          "weighted_population": 4045943.5536673954,
+          "weighted_flagged": 1318586.299066727,
+          "replicate": {
+            "point": 0.32590328598912627,
+            "se": 0.005539594891653762,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 39391,
+          "n_flagged": 18284,
+          "unweighted_pct": 46.41669416871874,
+          "weighted_pct": 47.23075665684652,
+          "weighted_population": 4045943.5536673954,
+          "weighted_flagged": 1910929.754306016,
+          "replicate": {
+            "point": 0.47230756656846523,
+            "se": 0.009786710011114808,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 39391,
+          "n_flagged": 10962,
+          "unweighted_pct": 27.82869183315986,
+          "weighted_pct": 28.547045963100043,
+          "weighted_population": 4045943.5536673954,
+          "weighted_flagged": 1154997.3659065147,
+          "replicate": {
+            "point": 0.28547045963100043,
+            "se": 0.004172763067456485,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 39391,
+          "n_flagged": 10973,
+          "unweighted_pct": 27.85661699372953,
+          "weighted_pct": 28.573265556829163,
+          "weighted_population": 4045943.5536673954,
+          "weighted_flagged": 1156058.1958687957,
+          "replicate": {
+            "point": 0.28573265556829164,
+            "se": 0.004258575549046562,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "one_person": {
+        "label": "one_person",
+        "sample_households": 34567,
+        "estimated_households": 3617928.4767034748,
+        "mean_hh_size": 1.0,
+        "weighted_mean_hh_size": 1.0,
+        "median_income_at_current": 28000.0,
+        "median_income_at_2021": 34032.61802575107,
+        "median_income_at_unweighted_current": 28000.0,
+        "median_shelter_current": 700.0,
+        "median_shelter_2021": 850.8154506437768,
+        "median_residual_current": 19200.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 46.94072381172795,
+          "weighted_pct": 47.27904421420067
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 34.65154627245639,
+          "weighted_pct": 35.16466340827695
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 22.397721316317906
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 34567,
+          "n_flagged": 11057,
+          "unweighted_pct": 31.987155379408104,
+          "weighted_pct": 32.402550842273214,
+          "weighted_population": 3617928.4767034748,
+          "weighted_flagged": 1172301.1141009242,
+          "replicate": {
+            "point": 0.32402550842273214,
+            "se": 0.004903727081567228,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 34567,
+          "n_flagged": 10499,
+          "unweighted_pct": 30.37289900772413,
+          "weighted_pct": 30.787685128125126,
+          "weighted_population": 3617928.4767034748,
+          "weighted_flagged": 1113876.4275682396,
+          "replicate": {
+            "point": 0.30787685128125125,
+            "se": 0.005880434945650262,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 34567,
+          "n_flagged": 15181,
+          "unweighted_pct": 43.91760928052767,
+          "weighted_pct": 44.66704239597907,
+          "weighted_population": 3617928.4767034748,
+          "weighted_flagged": 1616021.6465453408,
+          "replicate": {
+            "point": 0.4466704239597907,
+            "se": 0.008659357960024452,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 34567,
+          "n_flagged": 11057,
+          "unweighted_pct": 31.987155379408104,
+          "weighted_pct": 32.402550842273214,
+          "weighted_population": 3617928.4767034748,
+          "weighted_flagged": 1172301.1141009242,
+          "replicate": {
+            "point": 0.32402550842273214,
+            "se": 0.004903727081567228,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 34567,
+          "n_flagged": 11065,
+          "unweighted_pct": 32.010298839934045,
+          "weighted_pct": 32.424392258945566,
+          "weighted_population": 3617928.4767034748,
+          "weighted_flagged": 1173091.3209344288,
+          "replicate": {
+            "point": 0.32424392258945567,
+            "se": 0.004738028348813188,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "two_plus": {
+        "label": "two_plus",
+        "sample_households": 95675,
+        "estimated_households": 9401151.938242575,
+        "mean_hh_size": 3.018217925267834,
+        "weighted_mean_hh_size": 2.9967347480866757,
+        "median_income_at_current": 67000.0,
+        "median_income_at_2021": 81435.19313304721,
+        "median_income_at_unweighted_current": 68000.0,
+        "median_shelter_current": 1000.0,
+        "median_shelter_2021": 1215.4506437768239,
+        "median_residual_current": 54000.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 22.61928403449177,
+          "weighted_pct": 22.84262812663955
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 16.325058792788084,
+          "weighted_pct": 16.57974508297859
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 8.415656047781065
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 95675,
+          "n_flagged": 11981,
+          "unweighted_pct": 12.522602560752546,
+          "weighted_pct": 12.69191897629133,
+          "weighted_population": 9401151.938242575,
+          "weighted_flagged": 1193186.5868397895,
+          "replicate": {
+            "point": 0.1269191897629133,
+            "se": 0.0033697226977659265,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 95675,
+          "n_flagged": 11403,
+          "unweighted_pct": 11.918474000522602,
+          "weighted_pct": 12.087830814292623,
+          "weighted_population": 9401151.938242575,
+          "weighted_flagged": 1136395.3408893542,
+          "replicate": {
+            "point": 0.12087830814292623,
+            "se": 0.003313841735752827,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 95675,
+          "n_flagged": 18311,
+          "unweighted_pct": 19.138750979879802,
+          "weighted_pct": 19.508657078686145,
+          "weighted_population": 9401151.938242575,
+          "weighted_flagged": 1834038.493078,
+          "replicate": {
+            "point": 0.19508657078686145,
+            "se": 0.004820345621948907,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 95675,
+          "n_flagged": 7291,
+          "unweighted_pct": 7.62059054089365,
+          "weighted_pct": 7.7219796972768,
+          "weighted_population": 9401151.938242575,
+          "weighted_flagged": 725955.0439812359,
+          "replicate": {
+            "point": 0.077219796972768,
+            "se": 0.002819164686658648,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 95675,
+          "n_flagged": 7294,
+          "unweighted_pct": 7.623726156258166,
+          "weighted_pct": 7.724858313967117,
+          "weighted_population": 9401151.938242575,
+          "weighted_flagged": 726225.6671100124,
+          "replicate": {
+            "point": 0.07724858313967117,
+            "se": 0.0028454014024421733,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "cmhc_universe_drop_neg_residual": {
+        "label": "drop_neg_residual",
+        "sample_households": 124300,
+        "estimated_households": 12416486.281171925,
+        "mean_hh_size": 2.5113837489943687,
+        "weighted_mean_hh_size": 2.470678933051267,
+        "median_income_at_current": 57000.0,
+        "median_income_at_2021": 69280.68669527897,
+        "median_income_at_unweighted_current": 58000.0,
+        "median_shelter_current": 900.0,
+        "median_shelter_2021": 1093.9055793991415,
+        "median_residual_current": 44400.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 25.683829444891394,
+          "weighted_pct": 26.218351742345963
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 22.11745776347546,
+          "weighted_pct": 22.71732570613961
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 8.045013644706764
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 124300,
+          "n_flagged": 17096,
+          "unweighted_pct": 13.7538213998391,
+          "weighted_pct": 14.19800680519256,
+          "weighted_population": 12416486.281171925,
+          "weighted_flagged": 1762893.5671665906,
+          "replicate": {
+            "point": 0.1419800680519256,
+            "se": 0.0029395920698713843,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 124300,
+          "n_flagged": 15960,
+          "unweighted_pct": 12.839903459372486,
+          "weighted_pct": 13.2700797743559,
+          "weighted_population": 12416486.281171925,
+          "weighted_flagged": 1647677.6346834707,
+          "replicate": {
+            "point": 0.132700797743559,
+            "se": 0.002976450700401819,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 124300,
+          "n_flagged": 27550,
+          "unweighted_pct": 22.164119066773935,
+          "weighted_pct": 22.9329452903842,
+          "weighted_population": 12416486.281171925,
+          "weighted_flagged": 2847466.0058492175,
+          "replicate": {
+            "point": 0.22932945290384202,
+            "se": 0.005349124898093656,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 124300,
+          "n_flagged": 12406,
+          "unweighted_pct": 9.980691874497184,
+          "weighted_pct": 10.43501353738657,
+          "weighted_population": 12416486.281171925,
+          "weighted_flagged": 1295662.0243080368,
+          "replicate": {
+            "point": 0.10435013537386571,
+            "se": 0.00234383088924453,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 124300,
+          "n_flagged": 12417,
+          "unweighted_pct": 9.989541432019308,
+          "weighted_pct": 10.443557258518771,
+          "weighted_population": 12416486.281171925,
+          "weighted_flagged": 1296722.854270318,
+          "replicate": {
+            "point": 0.10443557258518771,
+            "se": 0.002373363570953495,
+            "n_replicates": 8,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "published_flags": {
+        "lombm": {
+          "universe_sample": 129948,
+          "weighted_pct_code2": 14.73842556945294,
+          "codes": "1/2/8/9 present; code 2 treated as below-MBM on the economic-family flag \u2014 UNCERTAIN without the NHS/2016 codebook page"
+        }
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 34996,
+          "with_shelter": 34686,
+          "analytic": 34567,
+          "pct_with_shelter": 99.11418447822608
+        },
+        "2": {
+          "households": 45333,
+          "with_shelter": 44598,
+          "analytic": 44482,
+          "pct_with_shelter": 98.37866454900404
+        },
+        "3": {
+          "households": 21230,
+          "with_shelter": 20895,
+          "analytic": 20773,
+          "pct_with_shelter": 98.42204427696656
+        },
+        "4": {
+          "households": 19964,
+          "with_shelter": 19610,
+          "analytic": 19466,
+          "pct_with_shelter": 98.22680825485874
+        },
+        "5": {
+          "households": 7644,
+          "with_shelter": 7415,
+          "analytic": 7325,
+          "pct_with_shelter": 97.00418628990057
+        },
+        "6": {
+          "households": 4025,
+          "with_shelter": 3859,
+          "analytic": 3629,
+          "pct_with_shelter": 95.87577639751552
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "file_identity": "2016 Census hierarchical PUMF (98M0002X)",
+      "catalogue": "98M0002X",
+      "instrument": "Census 2A-L",
+      "income_year": 2015,
+      "shelter_mode": "shelco",
+      "thresholds": {
+        "mbm_base": "2008 base",
+        "n_regions": 50,
+        "ref_family_total": 37552.36,
+        "ref_family_shelter": 9627.32,
+        "ref_family_nonshelter": 27924.78,
+        "single_adult_full_mbm": 18776.18,
+        "single_adult_nonshelter": 13962.39,
+        "cpi_income_year_to_2021": 1.1184834123222749,
+        "note": "2016 Census income year; contemporaneous official base before 2018-base revision"
+      },
+      "all_analytic": {
+        "label": "all_analytic",
+        "sample_households": 139869,
+        "estimated_households": 14037793.025199741,
+        "mean_hh_size": 2.4431003295941203,
+        "weighted_mean_hh_size": 2.4432496206415677,
+        "median_income_at_current": 62000.0,
+        "median_income_at_2021": 69345.97156398105,
+        "median_income_at_unweighted_current": 62000.0,
+        "median_shelter_current": 1000.0,
+        "median_shelter_2021": 1118.483412322275,
+        "median_residual_current": 48000.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 28.85628695422145,
+          "weighted_pct": 28.858743268610006
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 21.49654319398866,
+          "weighted_pct": 21.497332674036656
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 11.085331244271929
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 139869,
+          "n_flagged": 24241,
+          "unweighted_pct": 17.33121706739878,
+          "weighted_pct": 17.330750328330268,
+          "weighted_population": 14037793.025199741,
+          "weighted_flagged": 2432854.860805128,
+          "replicate": {
+            "point": 0.1733075032833027,
+            "se": 0.004247546878084002,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 139869,
+          "n_flagged": 23244,
+          "unweighted_pct": 16.618407223902366,
+          "weighted_pct": 16.617579930099772,
+          "weighted_population": 14037793.025199741,
+          "weighted_flagged": 2332741.476384538,
+          "replicate": {
+            "point": 0.16617579930099774,
+            "se": 0.004104487263925254,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 139869,
+          "n_flagged": 35679,
+          "unweighted_pct": 25.508869013148015,
+          "weighted_pct": 25.50710055319455,
+          "weighted_population": 14037793.025199741,
+          "weighted_flagged": 3580633.982387029,
+          "replicate": {
+            "point": 0.2550710055319455,
+            "se": 0.00643541661732914,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 139869,
+          "n_flagged": 18957,
+          "unweighted_pct": 13.553396392338545,
+          "weighted_pct": 13.552560019692441,
+          "weighted_population": 14037793.025199741,
+          "weighted_flagged": 1902480.3251803943,
+          "replicate": {
+            "point": 0.13552560019692442,
+            "se": 0.003563624031583673,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 139869,
+          "n_flagged": 20902,
+          "unweighted_pct": 14.943983298658031,
+          "weighted_pct": 14.942803556792681,
+          "weighted_population": 14037793.025199741,
+          "weighted_flagged": 2097639.8354647416,
+          "replicate": {
+            "point": 0.1494280355679268,
+            "se": 0.004130257350872533,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "owners": {
+        "label": "owners",
+        "sample_households": 95108,
+        "estimated_households": 9545768.19734209,
+        "mean_hh_size": 2.6155949026370022,
+        "weighted_mean_hh_size": 2.6156948164450964,
+        "median_income_at_current": 76000.0,
+        "median_income_at_2021": 85004.73933649289,
+        "median_income_at_unweighted_current": 76000.0,
+        "median_shelter_current": 1100.0,
+        "median_shelter_2021": 1230.3317535545025,
+        "median_residual_current": 60324.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 21.42932245447281,
+          "weighted_pct": 21.432196137353433
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 14.73377633847836,
+          "weighted_pct": 14.735292557589178
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 7.231171835408317
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 95108,
+          "n_flagged": 8946,
+          "unweighted_pct": 9.406148799259789,
+          "weighted_pct": 9.407026291564463,
+          "weighted_population": 9545768.19734209,
+          "weighted_flagged": 897972.9240557696,
+          "replicate": {
+            "point": 0.09407026291564463,
+            "se": 0.003738239822260776,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 95108,
+          "n_flagged": 8587,
+          "unweighted_pct": 9.028683181225555,
+          "weighted_pct": 9.029185962608999,
+          "weighted_population": 9545768.19734209,
+          "weighted_flagged": 861905.1620976061,
+          "replicate": {
+            "point": 0.09029185962608999,
+            "se": 0.0036916825939982455,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 95108,
+          "n_flagged": 14667,
+          "unweighted_pct": 15.421415653783068,
+          "weighted_pct": 15.421367238345935,
+          "weighted_population": 9545768.19734209,
+          "weighted_flagged": 1472087.9694333584,
+          "replicate": {
+            "point": 0.15421367238345934,
+            "se": 0.005860268688786478,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 95108,
+          "n_flagged": 6569,
+          "unweighted_pct": 6.906884804643143,
+          "weighted_pct": 6.907433701379283,
+          "weighted_population": 9545768.19734209,
+          "weighted_flagged": 659367.6095187532,
+          "replicate": {
+            "point": 0.06907433701379283,
+            "se": 0.0025419841524375636,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 95108,
+          "n_flagged": 7347,
+          "unweighted_pct": 7.7249022164276395,
+          "weighted_pct": 7.72539147621991,
+          "weighted_population": 9545768.19734209,
+          "weighted_flagged": 737447.9626571769,
+          "replicate": {
+            "point": 0.0772539147621991,
+            "se": 0.0027381421286617478,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "renters": {
+        "label": "renters",
+        "sample_households": 44761,
+        "estimated_households": 4492024.827857653,
+        "mean_hh_size": 2.0765845267085186,
+        "weighted_mean_hh_size": 2.0767953090631437,
+        "median_income_at_current": 38000.0,
+        "median_income_at_2021": 42502.36966824644,
+        "median_income_at_unweighted_current": 38000.0,
+        "median_shelter_current": 900.0,
+        "median_shelter_2021": 1006.6350710900474,
+        "median_residual_current": 27000.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 44.63707245146444,
+          "weighted_pct": 44.64051210077853
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 35.8660441008914,
+          "weighted_pct": 35.86699222988567
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 19.275604834136175
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 44761,
+          "n_flagged": 15295,
+          "unweighted_pct": 34.17037152878622,
+          "weighted_pct": 34.16904392938045,
+          "weighted_population": 4492024.827857653,
+          "weighted_flagged": 1534881.936749358,
+          "replicate": {
+            "point": 0.3416904392938045,
+            "se": 0.007624587194727905,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 44761,
+          "n_flagged": 14657,
+          "unweighted_pct": 32.745023569625346,
+          "weighted_pct": 32.74328105146309,
+          "weighted_population": 4492024.827857653,
+          "weighted_flagged": 1470836.3142869323,
+          "replicate": {
+            "point": 0.3274328105146309,
+            "se": 0.007383239513540439,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 44761,
+          "n_flagged": 21012,
+          "unweighted_pct": 46.942650968477025,
+          "weighted_pct": 46.93976756044076,
+          "weighted_population": 4492024.827857653,
+          "weighted_flagged": 2108546.012953671,
+          "replicate": {
+            "point": 0.46939767560440754,
+            "se": 0.011472660945222354,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 44761,
+          "n_flagged": 12388,
+          "unweighted_pct": 27.675878554992067,
+          "weighted_pct": 27.673772147303765,
+          "weighted_population": 4492024.827857653,
+          "weighted_flagged": 1243112.715661641,
+          "replicate": {
+            "point": 0.27673772147303766,
+            "se": 0.00943223650589835,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 44761,
+          "n_flagged": 13555,
+          "unweighted_pct": 30.28305891289292,
+          "weighted_pct": 30.280150376111582,
+          "weighted_population": 4492024.827857653,
+          "weighted_flagged": 1360191.8728075647,
+          "replicate": {
+            "point": 0.3028015037611158,
+            "se": 0.010304848621913838,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "one_person": {
+        "label": "one_person",
+        "sample_households": 39248,
+        "estimated_households": 3938663.9244329343,
+        "mean_hh_size": 1.0,
+        "weighted_mean_hh_size": 1.0,
+        "median_income_at_current": 31000.0,
+        "median_income_at_2021": 34672.98578199052,
+        "median_income_at_unweighted_current": 31000.0,
+        "median_shelter_current": 800.0,
+        "median_shelter_2021": 894.7867298578199,
+        "median_residual_current": 21600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 47.65593151243375,
+          "weighted_pct": 47.65735765283936
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 35.72411333061557,
+          "weighted_pct": 35.722852169690064
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 21.075069744731604
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 39248,
+          "n_flagged": 12623,
+          "unweighted_pct": 32.162148389726866,
+          "weighted_pct": 32.15908280082659,
+          "weighted_population": 3938663.9244329343,
+          "weighted_flagged": 1266638.1927046734,
+          "replicate": {
+            "point": 0.3215908280082659,
+            "se": 0.008510334708263918,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 39248,
+          "n_flagged": 12190,
+          "unweighted_pct": 31.058907460252748,
+          "weighted_pct": 31.055220042592495,
+          "weighted_population": 3938663.9244329343,
+          "weighted_flagged": 1223160.7484708568,
+          "replicate": {
+            "point": 0.31055220042592496,
+            "se": 0.008391596071293805,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 39248,
+          "n_flagged": 17287,
+          "unweighted_pct": 44.04555646147574,
+          "weighted_pct": 44.040614981447455,
+          "weighted_population": 3938663.9244329343,
+          "weighted_flagged": 1734611.814372677,
+          "replicate": {
+            "point": 0.4404061498144745,
+            "se": 0.010715987383347617,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 39248,
+          "n_flagged": 12623,
+          "unweighted_pct": 32.162148389726866,
+          "weighted_pct": 32.15908280082659,
+          "weighted_population": 3938663.9244329343,
+          "weighted_flagged": 1266638.1927046734,
+          "replicate": {
+            "point": 0.3215908280082659,
+            "se": 0.008510334708263918,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 39248,
+          "n_flagged": 13974,
+          "unweighted_pct": 35.604362005707294,
+          "weighted_pct": 35.60044861761122,
+          "weighted_population": 3938663.9244329343,
+          "weighted_flagged": 1402182.0266381362,
+          "replicate": {
+            "point": 0.3560044861761122,
+            "se": 0.00983533711175391,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "two_plus": {
+        "label": "two_plus",
+        "sample_households": 100621,
+        "estimated_households": 10099129.100766808,
+        "mean_hh_size": 3.0059927848063523,
+        "weighted_mean_hh_size": 3.0061174836081714,
+        "median_income_at_current": 77000.0,
+        "median_income_at_2021": 86123.22274881517,
+        "median_income_at_unweighted_current": 77000.0,
+        "median_shelter_current": 1200.0,
+        "median_shelter_2021": 1342.1800947867298,
+        "median_residual_current": 61400.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 21.52334005823834,
+          "weighted_pct": 21.527277003972547
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 15.946969320519575,
+          "weighted_pct": 15.949375034838514
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 7.189329692683502
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 100621,
+          "n_flagged": 11618,
+          "unweighted_pct": 11.546297492571133,
+          "weighted_pct": 11.547695414765075,
+          "weighted_population": 10099129.100766808,
+          "weighted_flagged": 1166216.668100454,
+          "replicate": {
+            "point": 0.11547695414765075,
+            "se": 0.004142663409673336,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 100621,
+          "n_flagged": 11054,
+          "unweighted_pct": 10.985778316653581,
+          "weighted_pct": 10.986895175242717,
+          "weighted_population": 10099129.100766808,
+          "weighted_flagged": 1109580.7279136817,
+          "replicate": {
+            "point": 0.10986895175242717,
+            "se": 0.004162556304039437,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 100621,
+          "n_flagged": 18392,
+          "unweighted_pct": 18.278490573538328,
+          "weighted_pct": 18.279023365234405,
+          "weighted_population": 10099129.100766808,
+          "weighted_flagged": 1846022.1680143522,
+          "replicate": {
+            "point": 0.18279023365234406,
+            "se": 0.00639984953894425,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 100621,
+          "n_flagged": 6334,
+          "unweighted_pct": 6.294908617485416,
+          "weighted_pct": 6.296009548263351,
+          "weighted_population": 10099129.100766808,
+          "weighted_flagged": 635842.132475721,
+          "replicate": {
+            "point": 0.06296009548263351,
+            "se": 0.00337306094105929,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 100621,
+          "n_flagged": 6928,
+          "unweighted_pct": 6.885242643185816,
+          "weighted_pct": 6.886314670180823,
+          "weighted_population": 10099129.100766808,
+          "weighted_flagged": 695457.8088266053,
+          "replicate": {
+            "point": 0.06886314670180824,
+            "se": 0.003540391139834773,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "cmhc_universe_drop_neg_residual": {
+        "label": "drop_neg_residual",
+        "sample_households": 135065,
+        "estimated_households": 13555541.925622977,
+        "mean_hh_size": 2.4654129493206973,
+        "weighted_mean_hh_size": 2.4655662290802067,
+        "median_income_at_current": 64000.0,
+        "median_income_at_2021": 71582.9383886256,
+        "median_income_at_unweighted_current": 64000.0,
+        "median_shelter_current": 1000.0,
+        "median_shelter_2021": 1118.483412322275,
+        "median_residual_current": 49800.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 26.325843112575427,
+          "weighted_pct": 26.327826432364887
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 22.050864398622885,
+          "weighted_pct": 22.051809055761932
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 7.922108629401585
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 135065,
+          "n_flagged": 19437,
+          "unweighted_pct": 14.390848850553436,
+          "weighted_pct": 14.389714346582405,
+          "weighted_population": 13555541.925622977,
+          "weighted_flagged": 1950603.7612283626,
+          "replicate": {
+            "point": 0.14389714346582405,
+            "se": 0.004060053047021345,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 135065,
+          "n_flagged": 18440,
+          "unweighted_pct": 13.652685743901086,
+          "weighted_pct": 13.651172243508295,
+          "weighted_population": 13555541.925622977,
+          "weighted_flagged": 1850490.3768077735,
+          "replicate": {
+            "point": 0.13651172243508294,
+            "se": 0.0035633438495278028,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 135065,
+          "n_flagged": 30875,
+          "unweighted_pct": 22.859364009921148,
+          "weighted_pct": 22.856945888335414,
+          "weighted_population": 13555541.925622977,
+          "weighted_flagged": 3098382.8828102644,
+          "replicate": {
+            "point": 0.22856945888335414,
+            "se": 0.006055342567443349,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 135065,
+          "n_flagged": 14153,
+          "unweighted_pct": 10.478658423721912,
+          "weighted_pct": 10.477111379214442,
+          "weighted_population": 13555541.925622977,
+          "weighted_flagged": 1420229.2256036294,
+          "replicate": {
+            "point": 0.10477111379214442,
+            "se": 0.003017750938233578,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 135065,
+          "n_flagged": 16098,
+          "unweighted_pct": 11.918705808314515,
+          "weighted_pct": 11.916814132192933,
+          "weighted_population": 13555541.925622977,
+          "weighted_flagged": 1615388.7358879768,
+          "replicate": {
+            "point": 0.11916814132192932,
+            "se": 0.003194405675336101,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "published_flags": {
+        "lombm": {
+          "universe_sample": 139473,
+          "weighted_pct_code2": 14.315791073122055,
+          "codes": "1/2/8/9 present; code 2 treated as below-MBM on the economic-family flag \u2014 UNCERTAIN without the NHS/2016 codebook page"
+        }
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 39678,
+          "with_shelter": 39451,
+          "analytic": 39248,
+          "pct_with_shelter": 99.42789455113665
+        },
+        "2": {
+          "households": 48363,
+          "with_shelter": 48219,
+          "analytic": 48113,
+          "pct_with_shelter": 99.70225172135724
+        },
+        "3": {
+          "households": 21424,
+          "with_shelter": 21380,
+          "analytic": 21349,
+          "pct_with_shelter": 99.79462285287528
+        },
+        "4": {
+          "households": 19463,
+          "with_shelter": 19437,
+          "analytic": 19411,
+          "pct_with_shelter": 99.86641319426604
+        },
+        "5": {
+          "households": 7526,
+          "with_shelter": 7517,
+          "analytic": 7508,
+          "pct_with_shelter": 99.88041456284878
+        },
+        "6": {
+          "households": 4266,
+          "with_shelter": 4250,
+          "analytic": 4240,
+          "pct_with_shelter": 99.6249413970933
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "file_identity": "2021 Census hierarchical PUMF (98M0002X)",
+      "catalogue": "98M0002X",
+      "instrument": "Census 2A-L",
+      "income_year": 2020,
+      "shelter_mode": "shelco",
+      "thresholds": {
+        "mbm_base": "2018 base",
+        "n_regions": 66,
+        "ref_family_total": 50078.34848484849,
+        "ref_family_shelter": 14985.348484848484,
+        "ref_family_nonshelter": 34690.5,
+        "single_adult_full_mbm": 25039.174242424244,
+        "single_adult_nonshelter": 17345.25,
+        "cpi_income_year_to_2021": 1.0335766423357664,
+        "note": "2021 Census income year; 2018-base is Canada official poverty line"
+      },
+      "all_analytic": {
+        "label": "all_analytic",
+        "sample_households": 148085,
+        "estimated_households": 14863013.172873277,
+        "mean_hh_size": 2.420630043556066,
+        "weighted_mean_hh_size": 2.420868211716846,
+        "median_income_at_current": 74000.0,
+        "median_income_at_2021": 76484.67153284671,
+        "median_income_at_unweighted_current": 74000.0,
+        "median_shelter_current": 1200.0,
+        "median_shelter_2021": 1240.2919708029196,
+        "median_residual_current": 58000.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 25.920248505925652,
+          "weighted_pct": 25.925961199454612
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 19.512442178478576,
+          "weighted_pct": 19.515998764848927
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 8.932127524053556
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 148085,
+          "n_flagged": 22132,
+          "unweighted_pct": 14.945470506803524,
+          "weighted_pct": 14.944972462631037,
+          "weighted_population": 14863013.172873277,
+          "weighted_flagged": 2221273.225803135,
+          "replicate": {
+            "point": 0.14944972462631037,
+            "se": 0.0010624867991069062,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 148085,
+          "n_flagged": 17591,
+          "unweighted_pct": 11.878988418813519,
+          "weighted_pct": 11.879104240156998,
+          "weighted_population": 14863013.172873277,
+          "weighted_flagged": 1765592.8280338827,
+          "replicate": {
+            "point": 0.11879104240156999,
+            "se": 0.0012455007852072173,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 148085,
+          "n_flagged": 39417,
+          "unweighted_pct": 26.617820846135665,
+          "weighted_pct": 26.615270346900516,
+          "weighted_population": 14863013.172873277,
+          "weighted_flagged": 3955831.137655659,
+          "replicate": {
+            "point": 0.26615270346900516,
+            "se": 0.0015795214154628917,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 148085,
+          "n_flagged": 17570,
+          "unweighted_pct": 11.86480737414323,
+          "weighted_pct": 11.86361011205928,
+          "weighted_population": 14863013.172873277,
+          "weighted_flagged": 1763289.933733697,
+          "replicate": {
+            "point": 0.11863610112059281,
+            "se": 0.0010466261766345474,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 148085,
+          "n_flagged": 20135,
+          "unweighted_pct": 13.596920687443022,
+          "weighted_pct": 13.595272557650809,
+          "weighted_population": 14863013.172873277,
+          "weighted_flagged": 2020667.1511316653,
+          "replicate": {
+            "point": 0.1359527255765081,
+            "se": 0.001056864509072396,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "owners": {
+        "label": "owners",
+        "sample_households": 99428,
+        "estimated_households": 9980207.471392192,
+        "mean_hh_size": 2.6004344852556622,
+        "weighted_mean_hh_size": 2.6005973076833118,
+        "median_income_at_current": 88000.0,
+        "median_income_at_2021": 90954.74452554744,
+        "median_income_at_unweighted_current": 88000.0,
+        "median_shelter_current": 1200.0,
+        "median_shelter_2021": 1240.2919708029196,
+        "median_residual_current": 70600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 19.91793056281933,
+          "weighted_pct": 19.923389437821225
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 13.90453393410307,
+          "weighted_pct": 13.908128771109906
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 6.331092099198697
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 99428,
+          "n_flagged": 8721,
+          "unweighted_pct": 8.771171098684476,
+          "weighted_pct": 8.772320847994584,
+          "weighted_population": 9980207.471392192,
+          "weighted_flagged": 875495.8206860502,
+          "replicate": {
+            "point": 0.08772320847994583,
+            "se": 0.0015522085737855636,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 99428,
+          "n_flagged": 6983,
+          "unweighted_pct": 7.02317254696866,
+          "weighted_pct": 7.024442227634918,
+          "weighted_population": 9980207.471392192,
+          "weighted_flagged": 701053.9080260482,
+          "replicate": {
+            "point": 0.07024442227634918,
+            "se": 0.0017118360767326352,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 99428,
+          "n_flagged": 17673,
+          "unweighted_pct": 17.774671118799535,
+          "weighted_pct": 17.774382872974535,
+          "weighted_population": 9980207.471392192,
+          "weighted_flagged": 1773920.2874824586,
+          "replicate": {
+            "point": 0.17774382872974534,
+            "se": 0.0016413322470362087,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 99428,
+          "n_flagged": 6555,
+          "unweighted_pct": 6.592710302932775,
+          "weighted_pct": 6.593231778466167,
+          "weighted_population": 9980207.471392192,
+          "weighted_flagged": 658018.2105606848,
+          "replicate": {
+            "point": 0.06593231778466167,
+            "se": 0.0013263487067680356,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 99428,
+          "n_flagged": 7649,
+          "unweighted_pct": 7.69300398278151,
+          "weighted_pct": 7.693258524169548,
+          "weighted_population": 9980207.471392192,
+          "weighted_flagged": 767803.162022686,
+          "replicate": {
+            "point": 0.07693258524169548,
+            "se": 0.0016146744987072955,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "renters": {
+        "label": "renters",
+        "sample_households": 48657,
+        "estimated_households": 4882805.701481083,
+        "mean_hh_size": 2.05320919908749,
+        "weighted_mean_hh_size": 2.0535110453550955,
+        "median_income_at_current": 51000.0,
+        "median_income_at_2021": 52712.40875912409,
+        "median_income_at_unweighted_current": 50000.0,
+        "median_shelter_current": 1100.0,
+        "median_shelter_2021": 1136.934306569343,
+        "median_residual_current": 36400.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 38.185667016051134,
+          "weighted_pct": 38.194913765978
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 30.971905378465586,
+          "weighted_pct": 30.97820091496394
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 14.248512153615655
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 48657,
+          "n_flagged": 13411,
+          "unweighted_pct": 27.562324023264896,
+          "weighted_pct": 27.56155963176817,
+          "weighted_population": 4882805.701481083,
+          "weighted_flagged": 1345777.4051170847,
+          "replicate": {
+            "point": 0.2756155963176817,
+            "se": 0.003012130468647216,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 48657,
+          "n_flagged": 10608,
+          "unweighted_pct": 21.80159072692521,
+          "weighted_pct": 21.80178743718866,
+          "weighted_population": 4882805.701481083,
+          "weighted_flagged": 1064538.9200078344,
+          "replicate": {
+            "point": 0.2180178743718866,
+            "se": 0.0035717467429935324,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 48657,
+          "n_flagged": 21744,
+          "unweighted_pct": 44.68832850360688,
+          "weighted_pct": 44.68559642894186,
+          "weighted_population": 4882805.701481083,
+          "weighted_flagged": 2181910.8501732005,
+          "replicate": {
+            "point": 0.4468559642894186,
+            "se": 0.003540823401542949,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 48657,
+          "n_flagged": 11015,
+          "unweighted_pct": 22.638058244445812,
+          "weighted_pct": 22.63599640751125,
+          "weighted_population": 4882805.701481083,
+          "weighted_flagged": 1105271.7231730125,
+          "replicate": {
+            "point": 0.2263599640751125,
+            "se": 0.0027640358214199383,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 48657,
+          "n_flagged": 12486,
+          "unweighted_pct": 25.66126148344534,
+          "weighted_pct": 25.6586902224873,
+          "weighted_population": 4882805.701481083,
+          "weighted_flagged": 1252863.9891089792,
+          "replicate": {
+            "point": 0.256586902224873,
+            "se": 0.0028873596628300312,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "one_person": {
+        "label": "one_person",
+        "sample_households": 43074,
+        "estimated_households": 4322450.916361381,
+        "mean_hh_size": 1.0,
+        "weighted_mean_hh_size": 1.0,
+        "median_income_at_current": 38000.0,
+        "median_income_at_2021": 39275.912408759126,
+        "median_income_at_unweighted_current": 38000.0,
+        "median_shelter_current": 900.0,
+        "median_shelter_2021": 930.2189781021898,
+        "median_residual_current": 26200.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 43.5111668291777,
+          "weighted_pct": 43.519226211148926
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 33.50280911919023,
+          "weighted_pct": 33.506896676030216
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 17.648679530409137
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 43074,
+          "n_flagged": 13071,
+          "unweighted_pct": 30.345452012815155,
+          "weighted_pct": 30.34376689774071,
+          "weighted_population": 4322450.916361381,
+          "weighted_flagged": 1311594.4303299547,
+          "replicate": {
+            "point": 0.3034376689774071,
+            "se": 0.003090332931045095,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 43074,
+          "n_flagged": 10405,
+          "unweighted_pct": 24.156103449876955,
+          "weighted_pct": 24.15569309696274,
+          "weighted_population": 4322450.916361381,
+          "weighted_flagged": 1044117.9776231089,
+          "replicate": {
+            "point": 0.2415569309696274,
+            "se": 0.0035242894237485444,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 43074,
+          "n_flagged": 20586,
+          "unweighted_pct": 47.792171611645074,
+          "weighted_pct": 47.787254738273965,
+          "weighted_population": 4322450.916361381,
+          "weighted_flagged": 2065580.6303384707,
+          "replicate": {
+            "point": 0.47787254738273965,
+            "se": 0.0031848135840301245,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 43074,
+          "n_flagged": 13071,
+          "unweighted_pct": 30.345452012815155,
+          "weighted_pct": 30.34376689774071,
+          "weighted_population": 4322450.916361381,
+          "weighted_flagged": 1311594.4303299547,
+          "replicate": {
+            "point": 0.3034376689774071,
+            "se": 0.003090332931045095,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 43074,
+          "n_flagged": 15036,
+          "unweighted_pct": 34.90736871430561,
+          "weighted_pct": 34.90483776840338,
+          "weighted_population": 4322450.916361381,
+          "weighted_flagged": 1508744.4799748054,
+          "replicate": {
+            "point": 0.3490483776840338,
+            "se": 0.003247299920420419,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "two_plus": {
+        "label": "two_plus",
+        "sample_households": 105011,
+        "estimated_households": 10540562.256511895,
+        "mean_hh_size": 3.0033520297873557,
+        "weighted_mean_hh_size": 3.0035347672860206,
+        "median_income_at_current": 92000.0,
+        "median_income_at_2021": 95089.05109489051,
+        "median_income_at_unweighted_current": 92000.0,
+        "median_shelter_current": 1300.0,
+        "median_shelter_2021": 1343.6496350364964,
+        "median_residual_current": 74200.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 18.70470712592014,
+          "weighted_pct": 18.711353228745466
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 13.773795126224872,
+          "weighted_pct": 13.77864168415401
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 5.357662776301908
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 105011,
+          "n_flagged": 9061,
+          "unweighted_pct": 8.628619858871927,
+          "weighted_pct": 8.630268227970344,
+          "weighted_population": 10540562.256511895,
+          "weighted_flagged": 909678.79547318,
+          "replicate": {
+            "point": 0.08630268227970343,
+            "se": 0.0011207467703881757,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 105011,
+          "n_flagged": 7186,
+          "unweighted_pct": 6.843092628391312,
+          "weighted_pct": 6.84474729955749,
+          "weighted_population": 10540562.256511895,
+          "weighted_flagged": 721474.8504107739,
+          "replicate": {
+            "point": 0.0684474729955749,
+            "se": 0.0009078635321906294,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 105011,
+          "n_flagged": 18831,
+          "unweighted_pct": 17.93240708116293,
+          "weighted_pct": 17.933108892264293,
+          "weighted_population": 10540562.256511895,
+          "weighted_flagged": 1890250.5073171884,
+          "replicate": {
+            "point": 0.17933108892264293,
+            "se": 0.001637706231028461,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 105011,
+          "n_flagged": 4499,
+          "unweighted_pct": 4.28431307196389,
+          "weighted_pct": 4.285307485610531,
+          "weighted_population": 10540562.256511895,
+          "weighted_flagged": 451695.50340374256,
+          "replicate": {
+            "point": 0.04285307485610531,
+            "se": 0.0007759318200685678,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 105011,
+          "n_flagged": 5099,
+          "unweighted_pct": 4.855681785717687,
+          "weighted_pct": 4.856692258902955,
+          "weighted_population": 10540562.256511895,
+          "weighted_flagged": 511922.6711568598,
+          "replicate": {
+            "point": 0.048566922589029546,
+            "se": 0.0009292576975752883,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "cmhc_universe_drop_neg_residual": {
+        "label": "drop_neg_residual",
+        "sample_households": 144490,
+        "estimated_households": 14502090.264674816,
+        "mean_hh_size": 2.4391445774794103,
+        "weighted_mean_hh_size": 2.439391084901765,
+        "median_income_at_current": 76000.0,
+        "median_income_at_2021": 78551.82481751825,
+        "median_income_at_unweighted_current": 75001.0,
+        "median_shelter_current": 1200.0,
+        "median_shelter_2021": 1240.2919708029196,
+        "median_residual_current": 59600.0,
+        "stir_at_gt30": {
+          "unweighted_pct": 24.07709876115994,
+          "weighted_pct": 24.082432644745417
+        },
+        "stir_bt_gt30_lt100": {
+          "unweighted_pct": 19.806907052391168,
+          "weighted_pct": 19.81065204241518
+        },
+        "stir_at_gt50": {
+          "weighted_pct": 6.665662429878252
+        },
+        "hardship_nonshelter_size_national": {
+          "n": 144490,
+          "n_flagged": 18537,
+          "unweighted_pct": 12.829261540591045,
+          "weighted_pct": 12.828152932796485,
+          "weighted_population": 14502090.264674816,
+          "weighted_flagged": 1860350.3176046761,
+          "replicate": {
+            "point": 0.12828152932796485,
+            "se": 0.0010305123077771817,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_size_geo": {
+          "n": 144490,
+          "n_flagged": 13996,
+          "unweighted_pct": 9.686483493667382,
+          "weighted_pct": 9.685982463210943,
+          "weighted_population": 14502090.264674816,
+          "weighted_flagged": 1404669.919835424,
+          "replicate": {
+            "point": 0.09685982463210942,
+            "se": 0.001233226882317116,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_full_mbm_size_national": {
+          "n": 144490,
+          "n_flagged": 35822,
+          "unweighted_pct": 24.792027129905183,
+          "weighted_pct": 24.788897075161113,
+          "weighted_population": 14502090.264674816,
+          "weighted_flagged": 3594908.2294572,
+          "replicate": {
+            "point": 0.24788897075161112,
+            "se": 0.0015804043317621808,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_nonshelter_single_adult": {
+          "n": 144490,
+          "n_flagged": 13975,
+          "unweighted_pct": 9.671949615890373,
+          "weighted_pct": 9.67010272271729,
+          "weighted_population": 14502090.264674816,
+          "weighted_flagged": 1402367.0255352384,
+          "replicate": {
+            "point": 0.0967010272271729,
+            "se": 0.000942409663967735,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        },
+        "hardship_draft3_leftover": {
+          "n": 144490,
+          "n_flagged": 16540,
+          "unweighted_pct": 11.447158972939302,
+          "weighted_pct": 11.44486217256643,
+          "weighted_population": 14502090.264674816,
+          "weighted_flagged": 1659744.2429332067,
+          "replicate": {
+            "point": 0.11444862172566429,
+            "se": 0.0009361720223946495,
+            "n_replicates": 16,
+            "method": "bootstrap mean of squared deviations from the full-weight estimate; formula not confirmed against a year-specific PUMF user guide"
+          }
+        }
+      },
+      "published_flags": {
+        "hcoreneed_ind": {
+          "universe_sample": 142660,
+          "weighted_pct": 10.123108270106812,
+          "unweighted_pct": 10.119164446936772,
+          "codes": "100 = in core housing need; 0 = not; 888 excluded as not applicable"
+        },
+        "stir_grp": {
+          "universe_sample": 148085,
+          "weighted_pct": 21.7977567981523,
+          "unweighted_pct": 21.793564506871054,
+          "codes": "interpreted as 1 = STIR group indicating 30%+; 9 excluded; confirm against 2021 codebook"
+        },
+        "lombm_2018": {
+          "universe_sample": 148085,
+          "weighted_pct": 9.309131193435556,
+          "codes": "1 = below 2018-base MBM (economic family); 0 = not; 8 excluded"
+        }
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 43953,
+          "with_shelter": 43564,
+          "analytic": 43074,
+          "pct_with_shelter": 99.11496371123701
+        },
+        "2": {
+          "households": 51251,
+          "with_shelter": 51039,
+          "analytic": 50851,
+          "pct_with_shelter": 99.58634953464323
+        },
+        "3": {
+          "households": 21933,
+          "with_shelter": 21831,
+          "analytic": 21771,
+          "pct_with_shelter": 99.53494733962522
+        },
+        "4": {
+          "households": 20044,
+          "with_shelter": 19966,
+          "analytic": 19917,
+          "pct_with_shelter": 99.6108561165436
+        },
+        "5": {
+          "households": 7911,
+          "with_shelter": 7864,
+          "analytic": 7844,
+          "pct_with_shelter": 99.40589053217039
+        },
+        "6": {
+          "households": 4697,
+          "with_shelter": 4646,
+          "analytic": 4628,
+          "pct_with_shelter": 98.91420055354482
+        }
+      }
+    }
+  ],
+  "sample_flow": [
+    {
+      "person_records_in_file": 309841,
+      "households_in_file": 124358,
+      "weighted_households_in_file": 12438363.772981854,
+      "drop_tenure_not_owner_renter": {
+        "sample": 9353,
+        "weighted": 935492.8220838169
+      },
+      "drop_missing_or_nonpositive_aftertax_income": {
+        "sample": 396,
+        "weighted": 39608.16396292008
+      },
+      "drop_missing_shelter": {
+        "sample": 71397,
+        "weighted": 7141171.9254055675
+      },
+      "analytic_households": {
+        "sample": 52785,
+        "weighted": 5279588.219148325
+      },
+      "analytic_owners": {
+        "sample": 30177,
+        "weighted": 3018322.131083432
+      },
+      "analytic_renters": {
+        "sample": 22608,
+        "weighted": 2261266.0880648913
+      },
+      "analytic_one_person": {
+        "sample": 31618,
+        "weighted": 3162451.8388373917
+      },
+      "analytic_two_plus": {
+        "sample": 21167,
+        "weighted": 2117136.3803109326
+      },
+      "negative_residual_inside_analytic": {
+        "sample": 2629,
+        "weighted": 262954.1996427194
+      },
+      "retention_pct_of_households": 42.44600266971164,
+      "year": 2006,
+      "file_identity": "2006 Census hierarchical PUMF (95M0029X)",
+      "local_path": "data/raw/census_2006.csv"
+    },
+    {
+      "person_records_in_file": 333008,
+      "households_in_file": 133192,
+      "weighted_households_in_file": 13317307.987983,
+      "drop_tenure_not_owner_renter": {
+        "sample": 501,
+        "weighted": 50715.358052317904
+      },
+      "drop_missing_or_nonpositive_aftertax_income": {
+        "sample": 948,
+        "weighted": 92754.30732192023
+      },
+      "drop_missing_shelter": {
+        "sample": 2129,
+        "weighted": 218601.39289883198
+      },
+      "analytic_households": {
+        "sample": 130242,
+        "weighted": 13019080.41494605
+      },
+      "analytic_owners": {
+        "sample": 90851,
+        "weighted": 8973136.861278653
+      },
+      "analytic_renters": {
+        "sample": 39391,
+        "weighted": 4045943.5536673954
+      },
+      "analytic_one_person": {
+        "sample": 34567,
+        "weighted": 3617928.4767034748
+      },
+      "analytic_two_plus": {
+        "sample": 95675,
+        "weighted": 9401151.938242575
+      },
+      "negative_residual_inside_analytic": {
+        "sample": 5942,
+        "weighted": 602594.1337741234
+      },
+      "retention_pct_of_households": 97.78515226139707,
+      "year": 2011,
+      "file_identity": "2011 NHS hierarchical PUMF (99M0002X)",
+      "local_path": "data/raw/census_2006_pumf.csv"
+    },
+    {
+      "person_records_in_file": 343330,
+      "households_in_file": 140720,
+      "weighted_households_in_file": 14123217.897179443,
+      "drop_tenure_not_owner_renter": {
+        "sample": 3,
+        "weighted": 301.4551030755
+      },
+      "drop_missing_or_nonpositive_aftertax_income": {
+        "sample": 390,
+        "weighted": 39156.79357691059
+      },
+      "drop_missing_shelter": {
+        "sample": 466,
+        "weighted": 46770.02924586065
+      },
+      "analytic_households": {
+        "sample": 139869,
+        "weighted": 14037793.025199741
+      },
+      "analytic_owners": {
+        "sample": 95108,
+        "weighted": 9545768.19734209
+      },
+      "analytic_renters": {
+        "sample": 44761,
+        "weighted": 4492024.827857653
+      },
+      "analytic_one_person": {
+        "sample": 39248,
+        "weighted": 3938663.9244329343
+      },
+      "analytic_two_plus": {
+        "sample": 100621,
+        "weighted": 10099129.100766808
+      },
+      "negative_residual_inside_analytic": {
+        "sample": 4804,
+        "weighted": 482251.09957676486
+      },
+      "retention_pct_of_households": 99.39525298465037,
+      "year": 2016,
+      "file_identity": "2016 Census hierarchical PUMF (98M0002X)",
+      "local_path": "data/raw/census_2011_nhs.csv"
+    },
+    {
+      "person_records_in_file": 361915,
+      "households_in_file": 149789,
+      "weighted_households_in_file": 15034101.37564022,
+      "drop_tenure_not_owner_renter": {
+        "sample": 8,
+        "weighted": 804.8010977899639
+      },
+      "drop_missing_or_nonpositive_aftertax_income": {
+        "sample": 833,
+        "weighted": 83622.2872134633
+      },
+      "drop_missing_shelter": {
+        "sample": 879,
+        "weighted": 88268.46809434419
+      },
+      "analytic_households": {
+        "sample": 148085,
+        "weighted": 14863013.172873277
+      },
+      "analytic_owners": {
+        "sample": 99428,
+        "weighted": 9980207.471392192
+      },
+      "analytic_renters": {
+        "sample": 48657,
+        "weighted": 4882805.701481083
+      },
+      "analytic_one_person": {
+        "sample": 43074,
+        "weighted": 4322450.916361381
+      },
+      "analytic_two_plus": {
+        "sample": 105011,
+        "weighted": 10540562.256511895
+      },
+      "negative_residual_inside_analytic": {
+        "sample": 3595,
+        "weighted": 360922.9081984587
+      },
+      "retention_pct_of_households": 98.86239977568447,
+      "year": 2021,
+      "file_identity": "2021 Census hierarchical PUMF (98M0002X)",
+      "local_path": "data/raw/census_2021_full.csv"
+    }
+  ],
+  "validation": [
+    {
+      "check": "weighted_private_households_in_file",
+      "year": 2006,
+      "estimate": 12438363.772981854,
+      "published": 12437500,
+      "abs_diff": 863.7729818541557,
+      "pct_diff": 0.006944908396810945,
+      "note": "PUMF WEIGHT \u00d7 household count should recover the private-household universe of the parent file, not the analytic residual-income subset."
+    },
+    {
+      "check": "median_after_tax_income_2020_constant",
+      "year": 2006,
+      "estimate": 38411.21495327103,
+      "published": 59600,
+      "abs_diff": -21188.785046728968,
+      "pct_diff": -35.55165276296807,
+      "note": "PUMF is a 1% hierarchical sample with top-coding. 2006 analytic sample is one-person-heavy because of shelter suppression."
+    },
+    {
+      "check": "weighted_private_households_in_file",
+      "year": 2011,
+      "estimate": 13317307.987983,
+      "published": 13320615,
+      "abs_diff": -3307.0120170004666,
+      "pct_diff": -0.02482627128702619,
+      "note": "PUMF WEIGHT \u00d7 household count should recover the private-household universe of the parent file, not the analytic residual-income subset."
+    },
+    {
+      "check": "median_after_tax_income_2020_constant",
+      "year": 2011,
+      "estimate": 63502.14592274678,
+      "published": 63600,
+      "abs_diff": -97.85407725322148,
+      "pct_diff": -0.15385861203336404,
+      "note": "PUMF is a 1% hierarchical sample with top-coding. 2006 analytic sample is one-person-heavy because of shelter suppression."
+    },
+    {
+      "check": "weighted_private_households_in_file",
+      "year": 2016,
+      "estimate": 14123217.897179443,
+      "published": 14072079,
+      "abs_diff": 51138.89717944339,
+      "pct_diff": 0.36340683689626285,
+      "note": "PUMF WEIGHT \u00d7 household count should recover the private-household universe of the parent file, not the analytic residual-income subset."
+    },
+    {
+      "check": "median_after_tax_income_2020_constant",
+      "year": 2016,
+      "estimate": 67093.20695102686,
+      "published": 66500,
+      "abs_diff": 593.206951026863,
+      "pct_diff": 0.8920405278599386,
+      "note": "PUMF is a 1% hierarchical sample with top-coding. 2006 analytic sample is one-person-heavy because of shelter suppression."
+    },
+    {
+      "check": "stir_bt_ge30_lt100",
+      "year": 2016,
+      "estimate": 21.497332674036656,
+      "published": 24.1,
+      "abs_diff": -2.6026673259633455,
+      "note": "Official unaffordable-housing rate uses a non-farm non-reserve STIR<100% universe. PUMF cannot fully implement farm/reserve exclusions."
+    },
+    {
+      "check": "cmhc_cis_housing_hardship_2017_context",
+      "year": 2016,
+      "estimate": 17.330750328330268,
+      "published": 9.0,
+      "note": "CMHC 9% is CIS 2017 with MBM disposable income, high-income exclusion, and negative-residual drop. A large gap is expected and is not evidence that the PUMF files are wrong."
+    },
+    {
+      "check": "weighted_private_households_in_file",
+      "year": 2021,
+      "estimate": 15034101.37564022,
+      "published": 14978941,
+      "abs_diff": 55160.37564021908,
+      "pct_diff": 0.3682528400386964,
+      "note": "PUMF WEIGHT \u00d7 household count should recover the private-household universe of the parent file, not the analytic residual-income subset."
+    },
+    {
+      "check": "median_after_tax_income_2020_constant",
+      "year": 2021,
+      "estimate": 74000.0,
+      "published": 73000,
+      "abs_diff": 1000.0,
+      "pct_diff": 1.3698630136986356,
+      "note": "PUMF is a 1% hierarchical sample with top-coding. 2006 analytic sample is one-person-heavy because of shelter suppression."
+    },
+    {
+      "check": "stir_bt_ge30_lt100",
+      "year": 2021,
+      "estimate": 19.515998764848927,
+      "published": 20.9,
+      "abs_diff": -1.3840012351510715,
+      "note": "Official unaffordable-housing rate uses a non-farm non-reserve STIR<100% universe. PUMF cannot fully implement farm/reserve exclusions."
+    },
+    {
+      "check": "hcoreneed_ind_vs_published_core_need",
+      "year": 2021,
+      "estimate": 10.123108270106812,
+      "published": 10.1,
+      "abs_diff": 0.023108270106812157,
+      "note": "Same concept family, but PUMF flag universe and rounding differ from the official 2A-L tabulation."
+    }
+  ],
+  "sensitivity": [
+    {
+      "year": 2006,
+      "variant": "primary_nonshelter_size_national_weighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 22.508288339490385,
+      "pp_vs_primary": 0.0
+    },
+    {
+      "year": 2006,
+      "variant": "nonshelter_size_geo_weighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 21.91531685137823,
+      "pp_vs_primary": -0.5929714881121555
+    },
+    {
+      "year": 2006,
+      "variant": "full_mbm_size_national_weighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 34.23889362508288,
+      "pp_vs_primary": 11.730605285592496
+    },
+    {
+      "year": 2006,
+      "variant": "nonshelter_single_adult_weighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 20.450885668276975,
+      "pp_vs_primary": -2.05740267121341
+    },
+    {
+      "year": 2006,
+      "variant": "draft3_leftover_weighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 21.443591929525436,
+      "pp_vs_primary": -1.0646964099649487
+    },
+    {
+      "year": 2006,
+      "variant": "primary_unweighted",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 22.508288339490385,
+      "pp_vs_primary": 0.0
+    },
+    {
+      "year": 2006,
+      "variant": "primary_drop_negative_residual",
+      "sample_households": 50156,
+      "estimated_households": 5016634.019505604,
+      "hardship_pct": 18.44644708509451,
+      "pp_vs_primary": -4.061841254395876
+    },
+    {
+      "year": 2006,
+      "variant": "primary_plus_high_income_exclusion",
+      "sample_households": 52785,
+      "estimated_households": 5279588.219148325,
+      "hardship_pct": 22.265795206971678,
+      "pp_vs_primary": -0.24249313251870674
+    },
+    {
+      "year": 2006,
+      "variant": "one_person_primary",
+      "sample_households": 31618,
+      "estimated_households": 3162451.8388373917,
+      "hardship_pct": 28.82851540261876,
+      "pp_vs_primary": 6.320227063128375
+    },
+    {
+      "year": 2006,
+      "variant": "owners_primary",
+      "sample_households": 30177,
+      "estimated_households": 3018322.131083432,
+      "hardship_pct": 12.065480332703716,
+      "pp_vs_primary": -10.442808006786668
+    },
+    {
+      "year": 2006,
+      "variant": "renters_primary",
+      "sample_households": 22608,
+      "estimated_households": 2261266.0880648913,
+      "hardship_pct": 36.4472753007785,
+      "pp_vs_primary": 13.938986961288116
+    },
+    {
+      "year": 2011,
+      "variant": "primary_nonshelter_size_national_weighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 18.169391581797957,
+      "pp_vs_primary": 0.0
+    },
+    {
+      "year": 2011,
+      "variant": "nonshelter_size_geo_weighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 17.284414080999582,
+      "pp_vs_primary": -0.8849775007983745
+    },
+    {
+      "year": 2011,
+      "variant": "full_mbm_size_national_weighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 26.500029415769127,
+      "pp_vs_primary": 8.33063783397117
+    },
+    {
+      "year": 2011,
+      "variant": "nonshelter_single_adult_weighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 14.580570190679065,
+      "pp_vs_primary": -3.5888213911188913
+    },
+    {
+      "year": 2011,
+      "variant": "draft3_leftover_weighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 14.588718461743305,
+      "pp_vs_primary": -3.5806731200546515
+    },
+    {
+      "year": 2011,
+      "variant": "primary_unweighted",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 17.688610432886474,
+      "pp_vs_primary": -0.4807811489114826
+    },
+    {
+      "year": 2011,
+      "variant": "primary_drop_negative_residual",
+      "sample_households": 124300,
+      "estimated_households": 12416486.281171925,
+      "hardship_pct": 14.19800680519256,
+      "pp_vs_primary": -3.9713847766053973
+    },
+    {
+      "year": 2011,
+      "variant": "primary_plus_high_income_exclusion",
+      "sample_households": 130242,
+      "estimated_households": 13019080.41494605,
+      "hardship_pct": 18.121065050993458,
+      "pp_vs_primary": -0.048326530804498447
+    },
+    {
+      "year": 2011,
+      "variant": "one_person_primary",
+      "sample_households": 34567,
+      "estimated_households": 3617928.4767034748,
+      "hardship_pct": 32.402550842273214,
+      "pp_vs_primary": 14.233159260475258
+    },
+    {
+      "year": 2011,
+      "variant": "owners_primary",
+      "sample_households": 90851,
+      "estimated_households": 8973136.861278653,
+      "hardship_pct": 10.845655376704851,
+      "pp_vs_primary": -7.323736205093105
+    },
+    {
+      "year": 2011,
+      "variant": "renters_primary",
+      "sample_households": 39391,
+      "estimated_households": 4045943.5536673954,
+      "hardship_pct": 34.41205202243453,
+      "pp_vs_primary": 16.242660440636573
+    },
+    {
+      "year": 2016,
+      "variant": "primary_nonshelter_size_national_weighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 17.330750328330268,
+      "pp_vs_primary": 0.0
+    },
+    {
+      "year": 2016,
+      "variant": "nonshelter_size_geo_weighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 16.617579930099772,
+      "pp_vs_primary": -0.7131703982304956
+    },
+    {
+      "year": 2016,
+      "variant": "full_mbm_size_national_weighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 25.50710055319455,
+      "pp_vs_primary": 8.176350224864283
+    },
+    {
+      "year": 2016,
+      "variant": "nonshelter_single_adult_weighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 13.552560019692441,
+      "pp_vs_primary": -3.778190308637827
+    },
+    {
+      "year": 2016,
+      "variant": "draft3_leftover_weighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 14.942803556792681,
+      "pp_vs_primary": -2.387946771537587
+    },
+    {
+      "year": 2016,
+      "variant": "primary_unweighted",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 17.33121706739878,
+      "pp_vs_primary": 0.0004667390685106909
+    },
+    {
+      "year": 2016,
+      "variant": "primary_drop_negative_residual",
+      "sample_households": 135065,
+      "estimated_households": 13555541.925622977,
+      "hardship_pct": 14.389714346582405,
+      "pp_vs_primary": -2.941035981747863
+    },
+    {
+      "year": 2016,
+      "variant": "primary_plus_high_income_exclusion",
+      "sample_households": 139869,
+      "estimated_households": 14037793.025199741,
+      "hardship_pct": 17.283535235350953,
+      "pp_vs_primary": -0.04721509297931448
+    },
+    {
+      "year": 2016,
+      "variant": "one_person_primary",
+      "sample_households": 39248,
+      "estimated_households": 3938663.9244329343,
+      "hardship_pct": 32.15908280082659,
+      "pp_vs_primary": 14.82833247249632
+    },
+    {
+      "year": 2016,
+      "variant": "owners_primary",
+      "sample_households": 95108,
+      "estimated_households": 9545768.19734209,
+      "hardship_pct": 9.407026291564463,
+      "pp_vs_primary": -7.923724036765805
+    },
+    {
+      "year": 2016,
+      "variant": "renters_primary",
+      "sample_households": 44761,
+      "estimated_households": 4492024.827857653,
+      "hardship_pct": 34.16904392938045,
+      "pp_vs_primary": 16.838293601050182
+    },
+    {
+      "year": 2021,
+      "variant": "primary_nonshelter_size_national_weighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 14.944972462631037,
+      "pp_vs_primary": 0.0
+    },
+    {
+      "year": 2021,
+      "variant": "nonshelter_size_geo_weighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 11.879104240156998,
+      "pp_vs_primary": -3.0658682224740392
+    },
+    {
+      "year": 2021,
+      "variant": "full_mbm_size_national_weighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 26.615270346900516,
+      "pp_vs_primary": 11.670297884269479
+    },
+    {
+      "year": 2021,
+      "variant": "nonshelter_single_adult_weighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 11.86361011205928,
+      "pp_vs_primary": -3.081362350571757
+    },
+    {
+      "year": 2021,
+      "variant": "draft3_leftover_weighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 13.595272557650809,
+      "pp_vs_primary": -1.3496999049802287
+    },
+    {
+      "year": 2021,
+      "variant": "primary_unweighted",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 14.945470506803524,
+      "pp_vs_primary": 0.0004980441724864448
+    },
+    {
+      "year": 2021,
+      "variant": "primary_drop_negative_residual",
+      "sample_households": 144490,
+      "estimated_households": 14502090.264674816,
+      "hardship_pct": 12.828152932796485,
+      "pp_vs_primary": -2.1168195298345527
+    },
+    {
+      "year": 2021,
+      "variant": "primary_plus_high_income_exclusion",
+      "sample_households": 148085,
+      "estimated_households": 14863013.172873277,
+      "hardship_pct": 14.877388689245569,
+      "pp_vs_primary": -0.0675837733854685
+    },
+    {
+      "year": 2021,
+      "variant": "one_person_primary",
+      "sample_households": 43074,
+      "estimated_households": 4322450.916361381,
+      "hardship_pct": 30.34376689774071,
+      "pp_vs_primary": 15.398794435109673
+    },
+    {
+      "year": 2021,
+      "variant": "owners_primary",
+      "sample_households": 99428,
+      "estimated_households": 9980207.471392192,
+      "hardship_pct": 8.772320847994584,
+      "pp_vs_primary": -6.172651614636454
+    },
+    {
+      "year": 2021,
+      "variant": "renters_primary",
+      "sample_households": 48657,
+      "estimated_households": 4882805.701481083,
+      "hardship_pct": 27.56155963176817,
+      "pp_vs_primary": 12.616587169137132
+    }
+  ],
+  "unresolved": [
+    "PUMF geography is not the official 50-region MBM geography. National means are used as the primary threshold; CMA/PR assignment is a documented approximation.",
+    "Census TOTINC_AT is after-tax income, not MBM disposable income (which also deducts EI/CPP/union/childcare/support/health premiums and applies a mortgage-free homeowner adjustment).",
+    "Farm, band and reserve households cannot be fully excluded with the variables retained on these PUMFs (TENUR==8 is dropped; REGIND is not a reserve-housing flag).",
+    "2011 TENUR==2 combines renters and band housing.",
+    "2006 GROSRT/OMP code 8888 suppresses shelter for most multi-person households; the 2006 all-household series is not comparable.",
+    "2006 has no PR; REGION 1\u20136 provincial grouping is inferred from household shares (UNCERTAIN).",
+    "Replicate-weight variance uses a generic bootstrap formula; year-specific PUMF user-guide constants were not on disk.",
+    "CMHC high-income, investment-income and negative-residual universe rules are implemented only as sensitivity variants.",
+    "2018-base MBM is the official poverty line from 2018; 2005 uses 2000-base and 2010/2015 use 2008-base. Base-year changes are a real series break.",
+    "The 2024 CMHC Census housing-hardship update (NH18-33/85-2024) was not recovered; CIS 2017 ~9% is the available official hardship benchmark.",
+    "2001 after-tax residual series remains not feasible (TOTINCH is before-tax only)."
+  ]
+}

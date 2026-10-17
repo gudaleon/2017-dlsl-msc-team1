@@ -1,0 +1,5 @@
+year,households_valid,retention_pct_hh,median_income_2021,median_shelter_2021,stir_gt30_pct,hardship_pct,owner_hardship_pct,renter_hardship_pct,one_person_valid,one_person_retention_pct,one_person_median_income_2021,one_person_median_shelter_2021,one_person_hardship_pct
+2006,52810,42.5,38280,766,36.7,22.1,11.6,36.0,31618,95.0,30624,766,31.2
+2011,130242,97.8,64288,1033,29.1,15.0,8.7,29.6,34567,98.8,32144,804,34.3
+2016,139872,99.4,67084,1082,29.4,15.6,8.1,31.4,39248,98.9,33542,866,37.1
+2021,148091,98.9,74000,1200,25.9,14.2,8.1,26.6,43074,98.0,38000,900,36.4
