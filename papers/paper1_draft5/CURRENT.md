@@ -2,6 +2,7 @@
 
 Last validated pass: 17 October 2026  
 Branch: `cursor/paper1-draft5-validation-0ace`  
+Google Drive: https://drive.google.com/drive/folders/1-AwjMt2FRlL3g-Sbye-uOqZOnQPj8NgH  
 Stage 2 (manuscript rewrite / publication figures) has **not** been started.
 
 ## What is current
