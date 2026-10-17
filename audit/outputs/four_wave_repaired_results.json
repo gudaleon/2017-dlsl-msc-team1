@@ -1,0 +1,418 @@
+{
+  "analysis_date": "2026-10-16T21:48:31.185695+00:00",
+  "pipeline": "audit/run_four_wave_repaired.py",
+  "original_results_preserved_at": "audit/original/four_wave_temporal_results.json",
+  "years_analyzed": [
+    2006,
+    2011,
+    2016,
+    2021
+  ],
+  "total_valid_households": 471015,
+  "results_by_year": [
+    {
+      "year": 2006,
+      "file_identity": "2006 Census hierarchical PUMF (95M0029X); 309,841 persons / 124,358 HH",
+      "unit": "household (one row per HH_ID)",
+      "income_definition": "sum of person TOTINC_AT excluding not-available/not-applicable codes",
+      "shelter_definition": "SHELCO if present, else TENUR-conditioned GROSRT (rent) + OMP (own)",
+      "person_records_in_file": 309841,
+      "households_in_file": 124358,
+      "households_valid": 52810,
+      "retention_pct_of_households": 42.46610592000515,
+      "income_at_2021": {
+        "median_unweighted": 38280.0,
+        "median_weighted": 38280.0,
+        "p25_unweighted": 22968.0,
+        "p75_unweighted": 59972.0
+      },
+      "shelter_m_2021": {
+        "median_unweighted": 765.6,
+        "median_weighted": 765.6,
+        "p25_unweighted": 510.40000000000003,
+        "p75_unweighted": 1020.8000000000001
+      },
+      "stir": {
+        "median_unweighted": 0.24000000000000002,
+        "pct_above_30_unweighted": 36.7411475099413,
+        "pct_above_30_weighted": 36.7411475099413,
+        "pct_above_50_unweighted": 15.445938269267184
+      },
+      "hardship": {
+        "mbm_single_adult": 13500,
+        "rate_unweighted_pct": 22.081045256580193,
+        "rate_weighted_pct": 22.0810452565802,
+        "count": 11661
+      },
+      "tenure": {
+        "owner_hardship_unweighted_pct": 11.646626254596045,
+        "renter_hardship_unweighted_pct": 36.00636576632333,
+        "n_owner": 30189,
+        "n_renter": 22621
+      },
+      "diagnostics": {
+        "mean_persons_per_valid_hh": 1.4574512402953985,
+        "median_persons_per_valid_hh": 1.0
+      },
+      "one_person_households": {
+        "households_in_file": 33290,
+        "households_valid": 31618,
+        "retention_pct_of_one_person_hh": 94.9774707119255,
+        "median_income_2021": 30624.0,
+        "median_shelter_2021": 765.6,
+        "stir_gt30_unweighted_pct": 47.28003036245177,
+        "hardship_unweighted_pct": 31.165791637674744,
+        "owner_hardship_unweighted_pct": 19.069330830092532,
+        "renter_hardship_unweighted_pct": 41.96599616858238
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 33290,
+          "with_shelter": 31759,
+          "pct": 95.40102132772604
+        },
+        "2": {
+          "households": 41721,
+          "with_shelter": 19285,
+          "pct": 46.223724263560314
+        },
+        "3": {
+          "households": 19774,
+          "with_shelter": 1295,
+          "pct": 6.549003742287852
+        },
+        "4": {
+          "households": 18683,
+          "with_shelter": 490,
+          "pct": 2.6227051330086173
+        },
+        "5": {
+          "households": 7450,
+          "with_shelter": 40,
+          "pct": 0.5369127516778524
+        },
+        "6": {
+          "households": 3440,
+          "with_shelter": 117,
+          "pct": 3.4011627906976742
+        }
+      }
+    },
+    {
+      "year": 2011,
+      "file_identity": "2011 NHS hierarchical PUMF (99M0002X); 333,008 persons / 133,192 HH; codebook total matches",
+      "unit": "household (one row per HH_ID)",
+      "income_definition": "sum of person TOTINC_AT excluding not-available/not-applicable codes",
+      "shelter_definition": "SHELCO if present, else TENUR-conditioned GROSRT (rent) + OMP (own)",
+      "person_records_in_file": 333008,
+      "households_in_file": 133192,
+      "households_valid": 130242,
+      "retention_pct_of_households": 97.78515226139707,
+      "income_at_2021": {
+        "median_unweighted": 64287.99999999999,
+        "median_weighted": 61991.99999999999,
+        "p25_unweighted": 36736.0,
+        "p75_unweighted": 101023.99999999999
+      },
+      "shelter_m_2021": {
+        "median_unweighted": 1033.1999999999998,
+        "median_weighted": 1033.1999999999998,
+        "p25_unweighted": 574.0,
+        "p75_unweighted": 1607.1999999999998
+      },
+      "stir": {
+        "median_unweighted": 0.20930232558139533,
+        "pct_above_30_unweighted": 29.1257812380031,
+        "pct_above_30_weighted": 29.681261867081055,
+        "pct_above_50_unweighted": 12.115139509528417
+      },
+      "hardship": {
+        "mbm_single_adult": 15000,
+        "rate_unweighted_pct": 15.010518880238324,
+        "rate_weighted_pct": 15.552217140346732,
+        "count": 19550
+      },
+      "tenure": {
+        "owner_hardship_unweighted_pct": 8.669139580191743,
+        "renter_hardship_unweighted_pct": 29.636211317305982,
+        "n_owner": 90851,
+        "n_renter": 39391
+      },
+      "diagnostics": {
+        "mean_persons_per_valid_hh": 2.482570906466424,
+        "median_persons_per_valid_hh": 2.0
+      },
+      "one_person_households": {
+        "households_in_file": 34996,
+        "households_valid": 34567,
+        "retention_pct_of_one_person_hh": 98.7741456166419,
+        "median_income_2021": 32143.999999999996,
+        "median_shelter_2021": 803.5999999999999,
+        "stir_gt30_unweighted_pct": 46.98411780021408,
+        "hardship_unweighted_pct": 34.26389330864698,
+        "owner_hardship_unweighted_pct": 22.51323969606263,
+        "renter_hardship_unweighted_pct": 46.13550450712417
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 34996,
+          "with_shelter": 34686,
+          "pct": 99.11418447822608
+        },
+        "2": {
+          "households": 45333,
+          "with_shelter": 44598,
+          "pct": 98.37866454900404
+        },
+        "3": {
+          "households": 21230,
+          "with_shelter": 20895,
+          "pct": 98.42204427696656
+        },
+        "4": {
+          "households": 19964,
+          "with_shelter": 19610,
+          "pct": 98.22680825485874
+        },
+        "5": {
+          "households": 7644,
+          "with_shelter": 7415,
+          "pct": 97.00418628990057
+        },
+        "6": {
+          "households": 4025,
+          "with_shelter": 3859,
+          "pct": 95.87577639751552
+        }
+      }
+    },
+    {
+      "year": 2016,
+      "file_identity": "2016 Census hierarchical PUMF (98M0002X); 343,330 persons / 140,720 HH \u2248 1% of 14,072,079 private households",
+      "unit": "household (one row per HH_ID)",
+      "income_definition": "sum of person TOTINC_AT excluding not-available/not-applicable codes",
+      "shelter_definition": "SHELCO if present, else TENUR-conditioned GROSRT (rent) + OMP (own)",
+      "person_records_in_file": 343330,
+      "households_in_file": 140720,
+      "households_valid": 139872,
+      "retention_pct_of_households": 99.39738487777147,
+      "income_at_2021": {
+        "median_unweighted": 67084.0,
+        "median_weighted": 67084.0,
+        "p25_unweighted": 38952.0,
+        "p75_unweighted": 106036.0
+      },
+      "shelter_m_2021": {
+        "median_unweighted": 1082.0,
+        "median_weighted": 1082.0,
+        "p25_unweighted": 649.2,
+        "p75_unweighted": 1731.2
+      },
+      "stir": {
+        "median_unweighted": 0.21176470588235297,
+        "pct_above_30_unweighted": 29.44477808281858,
+        "pct_above_30_weighted": 29.44714071929265,
+        "pct_above_50_unweighted": 11.083705101807368
+      },
+      "hardship": {
+        "mbm_single_adult": 17000,
+        "rate_unweighted_pct": 15.58782315259666,
+        "rate_weighted_pct": 15.586478455556419,
+        "count": 21803
+      },
+      "tenure": {
+        "owner_hardship_unweighted_pct": 8.127602304748287,
+        "renter_hardship_unweighted_pct": 31.440316346819774,
+        "n_owner": 95108,
+        "n_renter": 44761
+      },
+      "diagnostics": {
+        "mean_persons_per_valid_hh": 2.4431694692290096,
+        "median_persons_per_valid_hh": 2.0
+      },
+      "one_person_households": {
+        "households_in_file": 39678,
+        "households_valid": 39248,
+        "retention_pct_of_one_person_hh": 98.91627602197691,
+        "median_income_2021": 33542.0,
+        "median_shelter_2021": 865.6,
+        "stir_gt30_unweighted_pct": 48.8407052588667,
+        "hardship_unweighted_pct": 37.09997961679576,
+        "owner_hardship_unweighted_pct": 23.607440536694448,
+        "renter_hardship_unweighted_pct": 50.66421418352749
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 39678,
+          "with_shelter": 39451,
+          "pct": 99.42789455113665
+        },
+        "2": {
+          "households": 48363,
+          "with_shelter": 48219,
+          "pct": 99.70225172135724
+        },
+        "3": {
+          "households": 21424,
+          "with_shelter": 21380,
+          "pct": 99.79462285287528
+        },
+        "4": {
+          "households": 19463,
+          "with_shelter": 19437,
+          "pct": 99.86641319426604
+        },
+        "5": {
+          "households": 7526,
+          "with_shelter": 7517,
+          "pct": 99.88041456284878
+        },
+        "6": {
+          "households": 4266,
+          "with_shelter": 4250,
+          "pct": 99.6249413970933
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "file_identity": "2021 Census hierarchical PUMF (98M0002X); 361,915 persons / 149,789 HH",
+      "unit": "household (one row per HH_ID)",
+      "income_definition": "sum of person TOTINC_AT excluding not-available/not-applicable codes",
+      "shelter_definition": "SHELCO if present, else TENUR-conditioned GROSRT (rent) + OMP (own)",
+      "person_records_in_file": 361915,
+      "households_in_file": 149789,
+      "households_valid": 148091,
+      "retention_pct_of_households": 98.86640541027712,
+      "income_at_2021": {
+        "median_unweighted": 74000.0,
+        "median_weighted": 74000.0,
+        "p25_unweighted": 44000.0,
+        "p75_unweighted": 114000.0
+      },
+      "shelter_m_2021": {
+        "median_unweighted": 1200.0,
+        "median_weighted": 1200.0,
+        "p25_unweighted": 700.0,
+        "p75_unweighted": 1900.0
+      },
+      "stir": {
+        "median_unweighted": 0.2,
+        "pct_above_30_unweighted": 25.919873591237817,
+        "pct_above_30_weighted": 25.925584293254044,
+        "pct_above_50_unweighted": 8.930319870890196
+      },
+      "hardship": {
+        "mbm_single_adult": 19728,
+        "rate_unweighted_pct": 14.201403191281036,
+        "rate_weighted_pct": 14.199562654437099,
+        "count": 21031
+      },
+      "tenure": {
+        "owner_hardship_unweighted_pct": 8.11039143903126,
+        "renter_hardship_unweighted_pct": 26.647758801405757,
+        "n_owner": 99428,
+        "n_renter": 48657
+      },
+      "diagnostics": {
+        "mean_persons_per_valid_hh": 2.420761558771296,
+        "median_persons_per_valid_hh": 2.0
+      },
+      "one_person_households": {
+        "households_in_file": 43953,
+        "households_valid": 43074,
+        "retention_pct_of_one_person_hh": 98.00013650945328,
+        "median_income_2021": 38000.0,
+        "median_shelter_2021": 900.0,
+        "stir_gt30_unweighted_pct": 43.5111668291777,
+        "hardship_unweighted_pct": 36.41407809815666,
+        "owner_hardship_unweighted_pct": 25.048823584116057,
+        "renter_hardship_unweighted_pct": 47.74666172106825
+      },
+      "shelter_coverage_by_hh_size": {
+        "1": {
+          "households": 43953,
+          "with_shelter": 43564,
+          "pct": 99.11496371123701
+        },
+        "2": {
+          "households": 51251,
+          "with_shelter": 51039,
+          "pct": 99.58634953464323
+        },
+        "3": {
+          "households": 21933,
+          "with_shelter": 21831,
+          "pct": 99.53494733962522
+        },
+        "4": {
+          "households": 20044,
+          "with_shelter": 19966,
+          "pct": 99.6108561165436
+        },
+        "5": {
+          "households": 7911,
+          "with_shelter": 7864,
+          "pct": 99.40589053217039
+        },
+        "6": {
+          "households": 4697,
+          "with_shelter": 4646,
+          "pct": 98.91420055354482
+        }
+      }
+    }
+  ],
+  "drop_log": [
+    {
+      "year": 2006,
+      "person_rows": 309841,
+      "households": 124358,
+      "dropped_no_income": 396,
+      "dropped_no_shelter": 71372,
+      "valid_households": 52810
+    },
+    {
+      "year": 2011,
+      "person_rows": 333008,
+      "households": 133192,
+      "dropped_no_income": 948,
+      "dropped_no_shelter": 2129,
+      "valid_households": 130242
+    },
+    {
+      "year": 2016,
+      "person_rows": 343330,
+      "households": 140720,
+      "dropped_no_income": 390,
+      "dropped_no_shelter": 466,
+      "valid_households": 139872
+    },
+    {
+      "year": 2021,
+      "person_rows": 361915,
+      "households": 149789,
+      "dropped_no_income": 833,
+      "dropped_no_shelter": 879,
+      "valid_households": 148091
+    }
+  ],
+  "key_findings_repaired": {
+    "income_growth_2006_2021_pct": 93.31243469174504,
+    "shelter_growth_2006_2021_pct": 56.739811912225704,
+    "hardship_change_2006_2021_pp": -7.879642065299157,
+    "one_person_income_growth_2006_2021_pct": 24.08568443051202,
+    "one_person_shelter_growth_2006_2021_pct": 17.554858934169282,
+    "one_person_hardship_change_2006_2021_pp": 5.248286460481914,
+    "all_hh_2006_not_comparable": "2006 all-household medians are not comparable to later waves: GROSRT/OMP are confidentiality-suppressed (8888) for most multi-person households."
+  },
+  "limitations": [
+    "Household after-tax income is the sum of person TOTINC_AT; PUMF top-coding and rounding remain.",
+    "MBM line is a single-adult national average, not household-size or region specific.",
+    "2011 is the voluntary NHS, not a Census long-form; comparability is a documented break.",
+    "WEIGHT is the person weight; household estimates use the first person weight in the household.",
+    "CPI factors and MBM lines are those used in the original pipeline and still need official-table confirmation.",
+    "2006 hierarchical PUMF suppresses GROSRT/OMP (code 8888) for most households with 2+ persons; the all-household 2006 series is composition-biased toward one-person households.",
+    "A one-person-household restricted series is reported separately and is the only 2006\u20132021 comparison that does not mix suppressed and unsuppressed shelter."
+  ]
+}

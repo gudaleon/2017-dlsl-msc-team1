@@ -1,0 +1,5 @@
+year,instrument,income_year,mbm_base,sample_households,estimated_households,median_income_current,median_income_2021,median_shelter_current,median_shelter_2021,stir_at_gt30_w,stir_bt_gt30_lt100_w,hardship_ns_size_w,hardship_ns_size_uw,hardship_ns_size_se,owner_hardship_w,renter_hardship_w,one_person_hardship_w,full_mbm_hardship_w
+2006,Census long form 2B,2005,2000 base,52785,5279588,30000,39701,600,794,36.0,27.9,22.5,22.5,0.47,12.1,36.4,28.8,34.2
+2011,National Household Survey (voluntary),2010,2008 base,130242,13019080,54000,65634,900,1094,29.6,21.7,18.2,17.7,0.28,10.8,34.4,32.4,26.5
+2016,Census 2A-L,2015,2008 base,139869,14037793,62000,69346,1000,1118,28.9,21.5,17.3,17.3,0.42,9.4,34.2,32.2,25.5
+2021,Census 2A-L,2020,2018 base,148085,14863013,74000,76485,1200,1240,25.9,19.5,14.9,14.9,0.11,8.8,27.6,30.3,26.6
