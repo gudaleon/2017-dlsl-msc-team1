@@ -1,27 +1,17 @@
-# Paper 1 — High School Version (LaTeX)
+# Paper 1 (high school) — Draft 3.0
 
-This folder is the revised high-school manuscript. It uses a full journal skeleton (Abstract, Introduction, Methods, Results, Discussion, Conclusion). Figures and tables are **separate files**, then included in LaTeX.
+IMRAD manuscript on residual-income housing hardship, 2006–2021.
 
-## Compile
+- `paper1_highschool.tex` / `paper1_highschool.pdf` — manuscript
+- `generate_figures_tables.py` — rebuilds figures and tables from the frozen JSON results
+- `figures/` — PDF, SVG, and 300 dpi PNG
+- `tables/` — CSV + TeX snippets
+- `REVISION_LOG.md` — Draft 2.0 → 3.0 rendering fixes
 
-```bash
-cd papers/paper1_highschool
-python3 generate_figures_tables.py   # rebuild PNG + CSV + table .tex
+```
+python3 generate_figures_tables.py
 pdflatex paper1_highschool.tex
 pdflatex paper1_highschool.tex
 ```
 
-## Layout
-
-| Path | What it is |
-|---|---|
-| `paper1_highschool.tex` | Manuscript (includes figures and tables) |
-| `paper1_highschool.pdf` | Compiled PDF |
-| `figures/*.png` | Five 300 dpi figures (2016 wave excluded) |
-| `figures/*.jpg` | Smaller JPEG previews (also on Google Drive) |
-| `FIGURES.md` | Inventory with Drive links |
-| `tables/*.csv` | Five tables for spreadsheets |
-| `tables/*.tex` | Same tables as `\input{...}` snippets |
-| `generate_figures_tables.py` | Rebuild script |
-
-Census 2016 is excluded on purpose: after cleaning, only 9.4% of records remained and medians were not comparable.
+Plotted numbers are unchanged from Draft 2.0. Methods and limitations state the unresolved issues: unweighted person-records, person vs household units, simplified MBM, 2006/2016 exclusions, and Census/NHS harmonization.
