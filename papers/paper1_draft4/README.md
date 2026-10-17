@@ -40,3 +40,4 @@ Google Drive (new folder; Draft 3.0 not overwritten): https://drive.google.com/d
 - `UNRESOLVED_ISSUES.md` — what still cannot be implemented
 - `REVISED_METHODS.md` — replacement Methods section
 - `official/` — CPI, MBM and published-benchmark extracts
+- `NEXT_AGENT_INSTRUCTIONS.md` — Draft 5.0 instruction set (do not overwrite this folder)
