@@ -1,0 +1,17 @@
+year,check,estimate,published,source,note
+2011,weighted_homeownership_tenure_ok_file,68.93879659450356,,2021 Census housing / The Daily homeownership rate ~66.5% of private households,"PUMF owner share among TENUR in {1,2}. Not restricted to the residual-income analytic subset."
+2011,stir_bt_ge30_lt100_owner,15.922668552883737,,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2011,stir_bt_ge30_lt100_renter,34.65586055742415,,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2011,residual_hardship_primary,18.169391581797957,,Draft 4.0 / Draft 5.0 reconstructed estimand,Not comparable numerically to core need or STIR. Not an official CMHC hardship rate.
+2011,m0_random_groups_se_pp,0.10661727425264657,,95M0029XVB / 99M0002X user guides,2006/2011 hierarchical PUMF random-groups formula: sqrt(sum((r_i-rbar)^2)/56)
+2016,weighted_homeownership_tenure_ok_file,67.77544583458106,,2021 Census housing / The Daily homeownership rate ~66.5% of private households,"PUMF owner share among TENUR in {1,2}. Not restricted to the residual-income analytic subset."
+2016,stir_bt_ge30_lt100_owner,14.735292557589178,16.6,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2016,stir_bt_ge30_lt100_renter,35.86699222988567,40.0,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2016,residual_hardship_primary,17.330750328330268,,Draft 4.0 / Draft 5.0 reconstructed estimand,Not comparable numerically to core need or STIR. Not an official CMHC hardship rate.
+2021,weighted_homeownership_tenure_ok_file,66.67789792689683,66.5,2021 Census housing / The Daily homeownership rate ~66.5% of private households,"PUMF owner share among TENUR in {1,2}. Not restricted to the residual-income analytic subset."
+2021,hcoreneed_ind_all,10.123108270106812,10.1,Statistics Canada / CMHC core housing need,100 = in core housing need; 0 = not; 888 excluded as not applicable
+2021,hcoreneed_ind_owner,5.280557897120131,5.3,Statistics Canada / CMHC core housing need,Different indicator from residual-income hardship.
+2021,stir_bt_ge30_lt100_owner,13.908128771109906,14.8,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2021,hcoreneed_ind_renter,20.22989649394273,20.0,Statistics Canada / CMHC core housing need,Different indicator from residual-income hardship.
+2021,stir_bt_ge30_lt100_renter,30.97820091496394,33.2,The Daily 21 September 2022; Census unaffordable housing,Official unaffordable-housing universe is non-farm non-reserve STIR<100%. PUMF cannot fully implement farm/reserve exclusions.
+2021,residual_hardship_primary,14.944972462631037,,Draft 4.0 / Draft 5.0 reconstructed estimand,Not comparable numerically to core need or STIR. Not an official CMHC hardship rate.

@@ -1,0 +1,25 @@
+year,variable,official_label_or_role,presence,code_or_rule,documentation_status,source,draft4_assumption,stage1_disposition
+2006,REGION,Region of current residence,present,1 Eastern Canada (NL/PE/NS/NB); 2 Quebec; 3 Ontario; 4 Prairies (MB/SK/AB); 5 British Columbia; 6 Northern Canada (YT/NT/NU),CONFIRMED,95M0029XVB user guide REGION field,Inferred from household shares; labelled UNCERTAIN,UNCERTAIN retired; labels confirmed
+2006,PR,Province,absent on 2006 hierarchical PUMF,not on file,CONFIRMED_ABSENT,95M0029XVB record layout,No PR,unchanged
+2006,GROSRT / OMP,Monthly rent / owner's major payments,present,8888 not available; 9999 not applicable,CONFIRMED,95M0029XVB,Same,unchanged
+2006,WEIGHT / WT1-WT8,Household/person weight and 8 replicate weights,present,Random-groups SE = sqrt(sum((r_i-rbar)^2)/56),FORMULA_CONFIRMED,95M0029XVB Chapter on sampling variability,Draft 4 used mean((r_i-point)^2),Use documented formula for 2006/2011 only
+2011,LOMBM,Low income status based on MBM (economic family),present,1 non-low-income EF; 2 low-income EF; 8 NA; 9 not applicable (territories),CONFIRMED,99M0002X hierarchical user guide LOMBM field,Code 2 treated as below-MBM; UNCERTAIN,Confirmed; UNCERTAIN retired
+2011,TENUR,Tenure,present,1 owner; 2 rented or band; 8 not available,CONFIRMED,99M0002X / Draft 4 METHODS_AUDIT,2011 TENUR==2 combines renters and band,unchanged limitation
+2011,GROSRT / OMP,Monthly rent / owner's major payments,present,8888 / 9999,CONFIRMED,99M0002X,Same,unchanged
+2011,WEIGHT / WT1-WT8,Weight and 8 replicate weights,present,Same random-groups formula as 2006; divisor 56,FORMULA_CONFIRMED,99M0002X user guide,Approximate bootstrap,Documented SE implemented for 2011
+2011,EF_ID,Economic family unique identifier,present,hierarchical identifier,CONFIRMED,99M0002X,Present,Cannot allocate household shelter to EF
+2016,SHELCO,Monthly shelter cost,present,replaces GROSRT/OMP,CONFIRMED,Borealis 2016 note; 98M0002X,Same,unchanged
+2016,LOMBM,Low income status based on MBM,present,same 1/2/8/9 pattern as 2011,CONFIRMED_BY_2011_GUIDE_AND_2016_DICTIONARY,2011 PUMF guide + 2016 Census dictionary pop165/pop191,Code 2 = low income,Confirmed
+2016,PR / CMA,Province and selected CMA,present,CMA 462/535/825/835/933/999,CONFIRMED,2016 hierarchical PUMF,Same,unchanged
+2016,WEIGHT / WT1-WT16,Weight and 16 replicate weights,present,PUMF-specific divisor not recovered,WEIGHTS_PRESENT_FORMULA_NOT_RECOVERED,2016 hierarchical file; Census 98-306 is long-form Fay BRR,Approximate bootstrap,Do not report 2016 design-based CIs
+2016,EF_ID,Economic family unique identifier,present,hierarchical identifier,CONFIRMED,98M0002X,Present,NOT IMPLEMENTABLE for residual test
+2021,STIR_GRP,Shelter-cost-to-income ratio groups,present,0 / 1 / 9; 1 = 30%+ on before-tax monthly STIR,CONFIRMED_AND_FILE_IS_CORRECTED,"StatCan 98M0001X correction 8 Nov 2024; 100% agreement with 12*SHELCO/TOTINC_HH >= 0.30",Interpreted as 30%+; UNCERTAIN,Confirmed; local file matches corrected formula
+2021,HCORENEED_IND,Housing core need indicator,present,100 in core need; 0 not; 888 n/a,CONFIRMED,2021 hierarchical PUMF; matches published 10.1%,Same,unchanged
+2021,LOMBM_2018,2018-base MBM low-income flag (economic family),present,1 below MBM; 0 not; 8 excluded,CONFIRMED,2021 PUMF / Draft 4 validation,Same,unchanged; person/EF concept not household residual
+2021,EFCOVID_ERB,COVID-19 emergency and recovery benefits of economic family,present,dollar amount; 88888888 unknown; 99999999 n/a,CONFIRMED,2021 Census dictionary pop254; PUMF SAS layout,Present,Household amount = one copy per EF summed to HH
+2021,EFDIMBM_2018,Disposable income for 2018-base MBM of economic family,present,EF-level dollars,CONFIRMED,2021 hierarchical PUMF layout,Not used as household income,Cannot replace household TOTINC_AT without allocation
+2021,SHELCO,Monthly shelter cost,present,household dwelling cost copied to person rows,CONFIRMED,2021 hierarchical PUMF,Same,unchanged
+2021,WEIGHT / WT1-WT16,Weight and 16 replicate weights,present,PUMF-specific divisor not recovered,WEIGHTS_PRESENT_FORMULA_NOT_RECOVERED,2021 hierarchical file; 98-306 long-form method is not the PUMF write-up,Approximate bootstrap,Do not report 2021 design-based CIs
+all,HH_ID / PP_ID / PRIHM,Household and person identifiers; primary maintainer,present,exactly one PRIHM==1 per household,CONFIRMED,year user guides / Draft 4 audit,Same,unchanged
+all,TOTINC_AT,Person after-tax income,present,income year = census year - 1; NA 888888/999999 and 7-digit analogues,CONFIRMED,year user guides,Household income = sum of valid person amounts,unchanged; not MBM disposable income
+2011,NHS_nonresponse,Voluntary survey break,not a microdata variable,Do not apply an invented correction factor,CITATION_ONLY,"Statistics Canada, NHS user guide / The Daily 11 September 2013: global non-response about 26%",2011 is not interchangeable with a Census long form,unchanged
