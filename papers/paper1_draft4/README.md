@@ -16,6 +16,10 @@ python3 papers/paper1_draft4/reconstruct_four_wave.py
 
 Requires the five local CSVs under `data/raw/` (gitignored). Identity mapping is in `audit/codebook_mappings.md` and `VARIABLE_CROSSWALK.md`.
 
+Interactive summary: [Draft 4.0 methods reconstruction](https://cursor.com/canvas/store-0b0e7fe1-22d1-4c96-bffc-e7af685cdd0f/714d76a1-3970-48eb-b34d-42709ae77d08).
+
+Google Drive (new folder; Draft 3.0 not overwritten): https://drive.google.com/drive/folders/13Md3OCtWXfxYq16IU7JVzo4caYykb3a0
+
 ## Outputs
 
 | Path | Contents |

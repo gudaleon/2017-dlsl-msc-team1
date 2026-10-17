@@ -1,0 +1,5 @@
+year,file_identity,person_records,households_in_file,drop_tenure,drop_income,drop_shelter,analytic_n,analytic_N,retention_pct,owners_n,renters_n,one_person_n
+2006,2006 Census hierarchical PUMF (95M0029X),309841,124358,9353,396,71397,52785,5279588,42.4,30177,22608,31618
+2011,2011 NHS hierarchical PUMF (99M0002X),333008,133192,501,948,2129,130242,13019080,97.8,90851,39391,34567
+2016,2016 Census hierarchical PUMF (98M0002X),343330,140720,3,390,466,139869,14037793,99.4,95108,44761,39248
+2021,2021 Census hierarchical PUMF (98M0002X),361915,149789,8,833,879,148085,14863013,98.9,99428,48657,43074
