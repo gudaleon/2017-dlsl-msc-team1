@@ -64,3 +64,17 @@ pdflatex paper1_highschool.tex
 ```
 
 Output: 17 pages, `paper1_highschool.pdf`.
+
+## Drive package (17 October 2026)
+
+Draft 2.0 remains in `Draft_2.0_archive`. Draft 3.0 is the current folder.
+
+Uploaded to Drive: manuscript `.tex`, plotting script, revision log, README, tables (CSV + TeX), five SVGs, fig01–03 vector PDFs, and 1100 px PNG previews of all five figures.
+
+Not uploaded as raw binaries (Drive MCP `create_file` cannot carry a 168–410 KB PNG or the 258 KB compiled PDF without truncating the file):
+
+- `paper1_highschool.pdf` — compiled locally; 17 pages, 258028 bytes
+- `figures/fig0X_*.png` — 300 dpi masters
+- `figures/fig04_income_shelter_squeeze.pdf` and `fig05_summary_dashboard.pdf` — still in this git package; SVG + preview PNG are on Drive
+
+Do not treat the 1100 px `_preview.png` files as the 300 dpi masters.
