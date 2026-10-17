@@ -1,0 +1,10 @@
+stratum,sample_n,weighted_N,weighted_share_of_analytic,median_hh_erb,hardship_pct,note
+all_analytic,148085,14863013,100.0,0.0,14.945,EFCOVID_ERB is a dollar amount at the economic-family level. Household amount = sum of one copy per EF_ID. Sentinels 88888888/99999999 removed. TOTINC_AT already includes these benefits. No invented dollar amounts.
+erb_receipt_gt0,59713,5993395,40.3242261974878,10100.0,13.2339,EFCOVID_ERB is a dollar amount at the economic-family level. Household amount = sum of one copy per EF_ID. Sentinels 88888888/99999999 removed. TOTINC_AT already includes these benefits. No invented dollar amounts.
+no_recorded_erb,88372,8869618,59.6757738025122,,16.1012,EFCOVID_ERB is a dollar amount at the economic-family level. Household amount = sum of one copy per EF_ID. Sentinels 88888888/99999999 removed. TOTINC_AT already includes these benefits. No invented dollar amounts.
+erb_band_0,88372,8869618,59.6757738025122,0.0,16.1012,Documented amount bands only. Not a causal estimate of ERB effects.
+erb_band_1_to_5000,12790,1283522,8.635679332766118,3500.0,12.0581,Documented amount bands only. Not a causal estimate of ERB effects.
+erb_band_5001_to_10000,16396,1645470,11.07090713201991,7500.0,12.2432,Documented amount bands only. Not a causal estimate of ERB effects.
+erb_band_10001_to_20000,22111,2219456,14.932743097281923,14000.0,15.5471,Documented amount bands only. Not a causal estimate of ERB effects.
+erb_band_over_20000,8416,844947,5.684896635419844,26500.0,10.8733,Documented amount bands only. Not a causal estimate of ERB effects.
+sensitivity_subtract_recorded_erb_from_totinc_at,148085,14863013,100.0,0.0,20.0852,Sensitivity only: subtract the recorded household EFCOVID_ERB total from TOTINC_AT. This is not an official counterfactual and does not restore a non-pandemic income distribution.

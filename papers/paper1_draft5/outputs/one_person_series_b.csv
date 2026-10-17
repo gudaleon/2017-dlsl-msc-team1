@@ -1,0 +1,5 @@
+year,survey,sample_n,weighted_N,hardship_pct,retention_note
+2006,Census long form 2B,31618,3162452,28.8285,2006 one-person shelter is usable; 2006 all-household is not comparable.
+2011,National Household Survey (voluntary),34567,3617928,32.4026,2006 one-person shelter is usable; 2006 all-household is not comparable.
+2016,Census 2A-L,39248,3938664,32.1591,2006 one-person shelter is usable; 2006 all-household is not comparable.
+2021,Census 2A-L,43074,4322451,30.3438,2006 one-person shelter is usable; 2006 all-household is not comparable.

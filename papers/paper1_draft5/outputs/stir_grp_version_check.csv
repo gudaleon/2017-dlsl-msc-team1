@@ -1,0 +1,4 @@
+comparison,universe_n,stir_grp1_weighted_pct,reconstructed_weighted_pct,unweighted_agreement,note
+corrected_monthly_over_monthly_bt_ge30,148085,21.7977567981523,21.7977567981523,1.0,"November 8, 2024 StatCan correction: STIR_GRP should be SHELCO / (household income / 12). Uncorrected used SHELCO / annual income."
+uncorrected_monthly_over_annual_bt_ge30,148085,21.7977567981523,0.6498280230134603,0.7885606239659655,"November 8, 2024 StatCan correction: STIR_GRP should be SHELCO / (household income / 12). Uncorrected used SHELCO / annual income."
+corrected_at_ge30,148085,21.7977567981523,26.9420539085293,0.9465442144714185,"November 8, 2024 StatCan correction: STIR_GRP should be SHELCO / (household income / 12). Uncorrected used SHELCO / annual income."
